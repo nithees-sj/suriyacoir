@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import logo from '../assets/logo.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -17,9 +19,10 @@ export default function Navbar() {
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
         <Link
           to="/"
-          className="text-2xl font-bold text-emerald-950 tracking-tighter font-headline"
+          className="text-2xl font-bold text-emerald-950 tracking-tighter font-headline flex items-center gap-3"
         >
-          Suriya Coirs
+          <img src={logo} alt="Suriya Coir Logo" className="h-10 w-auto" />
+          <span>Suriya Coir</span>
         </Link>
 
         {/* Desktop Links */}
@@ -30,13 +33,23 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`transition-all duration-300 font-body tracking-tight ${
+                className={`relative py-1 transition-colors duration-200 font-body tracking-tight font-medium ${
                   isActive
-                    ? 'text-emerald-900 font-bold border-b-2 border-emerald-900/30 pb-1'
+                    ? 'text-emerald-900'
                     : 'text-emerald-800/70 hover:text-emerald-900'
                 }`}
               >
                 {link.name}
+                {isActive && (
+                  <motion.div
+                    layoutId="navbar-indicator"
+                    className="absolute left-0 -bottom-1 w-full h-[2px] bg-emerald-900/60"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
               </Link>
             );
           })}
