@@ -111,7 +111,7 @@ export default function Footer() {
           {/* Developer */}
           <div className="md:col-span-4">
             <p className="font-bold text-emerald-900 text-xs uppercase tracking-[0.15em] mb-5">
-              Development
+              Developed and managed by
             </p>
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4">
