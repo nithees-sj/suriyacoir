@@ -1,58 +1,56 @@
 [
   {
     "id": 1,
-    "name": "Premium Horticulture Coir",
-    "image": "/src/assets/horticulture-coir.jpg",
-    "description": "Maximum aeration for commercial nurseries and high-yield farming.",
-    "label": "",
-    "layout": "feature-large"
+    "name": "Elite-Grade Grow Bags",
+    "ref": "CM-041",
+    "description": "Engineered for high-yield berry and tomato cultivation with optimal air-to-water ratio.",
+    "label": "Industrial Spec",
+    "image": "prod-grow-bags",
+    "category": "Hydroponic Substrates"
   },
   {
     "id": 2,
-    "name": "Geo-Textiles",
-    "image": "/src/assets/geo-textiles.jpg",
-    "description": "Biodegradable soil stabilization solutions.",
-    "label": "",
-    "layout": "side-square"
+    "name": "Reinforced Geotextiles",
+    "ref": "CM-GT2",
+    "description": "High-tensile coconut fiber netting for infrastructure stabilization and slope conservation.",
+    "label": "Grade A+",
+    "image": "prod-geotextiles",
+    "category": "Industrial Geotextiles"
   },
   {
     "id": 3,
-    "name": "Industrial Fiber",
-    "image": "/src/assets/industrial-fiber.jpg",
-    "description": "Resilient natural fiber for upholstery and matting.",
-    "label": "",
-    "layout": "side-square"
+    "name": "Compressed Pellets",
+    "ref": "CM-PL09",
+    "description": "Quick-expanding bio-modular pellets designed for automated nursery seeding lines.",
+    "label": "Batch Tested",
+    "image": "prod-pellets",
+    "category": "Hydroponic Substrates"
   },
   {
     "id": 4,
-    "name": "Architectural Geotextile X-400",
-    "image": "/src/assets/geotextile-product.jpg",
-    "description": "High-tensile strength woven erosion control fabric.",
-    "label": "01 / FIBER",
-    "layout": "products-feature"
+    "name": "Buffered Coco Pith",
+    "ref": "CM-BP",
+    "description": "Triple-washed, low EC buffered pith for sensitive orchid and propagation systems.",
+    "label": "Low EC Max",
+    "image": "prod-coco-pith",
+    "category": "Custom Media"
   },
   {
     "id": 5,
-    "name": "Organic Pith Blocks",
-    "image": "/src/assets/pith-blocks.jpg",
-    "description": "Precision-compressed 5kg blocks.",
-    "label": "",
-    "layout": "products-side"
+    "name": "Biodegradable Pots",
+    "ref": "CM-BP15",
+    "description": "Permeable fiber pots that eliminate transplant shock and promote root-air pruning.",
+    "label": "Zero Waste",
+    "image": "prod-bio-pots",
+    "category": "Erosion Control"
   },
   {
     "id": 6,
-    "name": "Artisan Fiber Husk",
-    "image": "/src/assets/artisan-fiber.jpg",
-    "description": "Double-cleaned premium golden fiber.",
-    "label": "Limited Export",
-    "layout": "products-portrait"
-  },
-  {
-    "id": 7,
-    "name": "Industrial Grade Mulch",
-    "image": "/src/assets/coconut-farm.jpg",
-    "description": "Sustainable ground cover engineered for large-scale landscaping and industrial insulation.",
-    "label": "",
-    "layout": "products-wide"
+    "name": "Custom Blend Program",
+    "ref": "CM-CUSTOM",
+    "description": "Tailored fiber-to-chip ratios with specific buffering profiles for specialized crops.",
+    "label": "Bespoke Service",
+    "image": "prod-custom-blend",
+    "category": "Custom Media"
   }
 ]

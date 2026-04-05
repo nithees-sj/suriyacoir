@@ -1,188 +1,207 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import productsData from '../data/products.json';
 
-import geotextileImg from '../assets/geotextile-product.jpg';
-import pithImg from '../assets/pith-blocks.jpg';
-import artisanImg from '../assets/artisan-fiber.jpg';
-import farmImg from '../assets/coconut-farm.jpg';
+import growBagsImg from '../assets/prod-grow-bags.jpg';
+import geotextilesImg from '../assets/prod-geotextiles.jpg';
+import pelletsImg from '../assets/prod-pellets.jpg';
+import cocoPithImg from '../assets/prod-coco-pith.jpg';
+import bioPotsImg from '../assets/prod-bio-pots.jpg';
+import customBlendImg from '../assets/prod-custom-blend.jpg';
 import textureImg from '../assets/coir-texture-macro.jpg';
 
 const productImages = {
-  '/src/assets/geotextile-product.jpg': geotextileImg,
-  '/src/assets/pith-blocks.jpg': pithImg,
-  '/src/assets/artisan-fiber.jpg': artisanImg,
-  '/src/assets/coconut-farm.jpg': farmImg,
+  'prod-grow-bags': growBagsImg,
+  'prod-geotextiles': geotextilesImg,
+  'prod-pellets': pelletsImg,
+  'prod-coco-pith': cocoPithImg,
+  'prod-bio-pots': bioPotsImg,
+  'prod-custom-blend': customBlendImg,
 };
 
-// Filter products for the products page (id >= 4)
-const pageProducts = productsData.filter((p) => p.id >= 4);
-
-const categories = ['All Materials', 'Raw Fiber', 'Woven Geotextiles', 'Pith Blocks', 'Husk Chips'];
+const categories = [
+  'All Systems',
+  'Hydroponic Substrates',
+  'Erosion Control',
+  'Industrial Geotextiles',
+  'Custom Media',
+];
 
 export default function Products() {
-  const [activeCategory, setActiveCategory] = useState('All Materials');
+  const [activeCategory, setActiveCategory] = useState('All Systems');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredProducts = productsData.filter((p) => {
+    const matchCategory =
+      activeCategory === 'All Systems' || p.category === activeCategory;
+    const matchSearch =
+      !searchQuery ||
+      p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchCategory && matchSearch;
+  });
 
   return (
-    <main className="pt-32 pb-24 px-8 max-w-7xl mx-auto">
-      {/* Hero Section */}
-      <header className="mb-24 flex flex-col md:flex-row items-end justify-between gap-8">
-        <div className="max-w-2xl">
-          <span className="font-label text-xs font-bold tracking-[0.2em] text-primary/60 mb-4 block">
-            CURATED COLLECTION
+    <main className="pt-8 pb-20">
+      {/* Hero Section / Editorial Header */}
+      <header className="max-w-7xl mx-auto px-8 py-8 md:py-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+        <div>
+          <span className="inline-block px-3 py-1 mb-6 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold uppercase tracking-widest">
+            Sustainable Engineering
           </span>
-          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-primary">
-            Organic Fiber <br />
-            Engineering.
+          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.9] text-on-surface">
+            Precision <br />
+            <span className="text-primary italic">Ecology.</span>
           </h1>
+          <p className="mt-8 text-lg md:text-xl text-on-surface-variant max-w-md leading-relaxed font-body">
+            Harnessing the structural integrity of coconut fiber through
+            advanced modular manufacturing for global industrial applications.
+          </p>
         </div>
-        <div className="max-w-xs text-on-surface-variant mb-4">
-          <p>
-            Precision-milled sustainable materials crafted for high-performance architectural and
-            industrial applications.
+        <div className="flex flex-col gap-4 items-start lg:items-end">
+          <div className="flex gap-2">
+            <div className="w-12 h-1 bg-primary rounded-full"></div>
+            <div className="w-4 h-1 bg-surface-container-high rounded-full"></div>
+            <div className="w-4 h-1 bg-surface-container-high rounded-full"></div>
+          </div>
+          <p className="text-sm font-label text-outline text-right max-w-xs">
+            Modular Growth Solutions for High-Precision Agriculture and
+            Bio-Manufacturing.
           </p>
         </div>
       </header>
 
-      {/* Category Tabs */}
-      <section className="mb-16 overflow-x-auto">
-        <div className="flex items-center space-x-12 border-b border-outline-variant/20 pb-4">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`font-headline text-lg font-bold transition-colors whitespace-nowrap ${
-                activeCategory === cat
-                  ? 'text-primary relative after:absolute after:-bottom-[17px] after:left-0 after:w-full after:h-[2px] after:bg-primary'
-                  : 'text-on-surface-variant/40 hover:text-primary'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+      {/* Category Filtering */}
+      <section className="max-w-7xl mx-auto px-8 mb-12">
+        <div className="flex flex-wrap gap-4 items-center justify-between border-b border-outline-variant/15 pb-8">
+          <div className="flex gap-6 overflow-x-auto hide-scrollbar py-2">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`whitespace-nowrap font-headline font-bold text-sm transition-colors pb-2 px-1 ${
+                  activeCategory === cat
+                    ? 'text-primary border-b-2 border-primary'
+                    : 'text-on-surface-variant hover:text-primary'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full">
+            <span className="material-symbols-outlined text-outline text-sm">
+              search
+            </span>
+            <input
+              className="bg-transparent border-none focus:ring-0 focus:outline-none text-sm font-body w-40 md:w-64 placeholder:text-outline"
+              placeholder="Search catalog..."
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
         </div>
       </section>
 
       {/* Product Grid */}
-      <section className="editorial-grid">
-        {pageProducts.map((product) => {
-          if (product.layout === 'products-feature') {
-            return (
-              <div key={product.id} className="col-span-12 md:col-span-8 group">
-                <div className="relative overflow-hidden aspect-[16/9] mb-6 bg-surface-container-low">
-                  <img
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
-                    src={productImages[product.image]}
-                    alt={product.name}
-                  />
-                  <div className="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity"></div>
+      <section className="max-w-7xl mx-auto px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProducts.map((product) => (
+            <div
+              key={product.id}
+              className="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-4px]"
+            >
+              <div className="aspect-[4/3] overflow-hidden bg-surface-container">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src={productImages[product.image]}
+                  alt={product.name}
+                />
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="font-headline text-xl font-bold text-on-surface leading-tight">
+                    {product.name}
+                  </h3>
+                  <span className="text-xs font-bold font-label text-outline uppercase tracking-widest mt-1">
+                    Ref: {product.ref}
+                  </span>
                 </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="font-headline text-2xl font-bold text-primary">{product.name}</h3>
-                    <p className="font-body text-on-surface-variant mt-1">{product.description}</p>
-                  </div>
-                  {product.label && (
-                    <span className="font-label text-sm font-bold tracking-widest text-primary">
-                      {product.label}
-                    </span>
-                  )}
+                <p className="text-on-surface-variant text-sm font-body leading-relaxed mb-8">
+                  {product.description}
+                </p>
+                <div className="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+                  <span className="text-primary font-headline font-extrabold">
+                    {product.label}
+                  </span>
                 </div>
               </div>
-            );
-          }
+            </div>
+          ))}
+        </div>
 
-          if (product.layout === 'products-side') {
-            return (
-              <div key={product.id} className="col-span-12 md:col-span-4 group flex flex-col justify-end">
-                <div className="relative overflow-hidden aspect-square mb-6 bg-surface-container">
-                  <img
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src={productImages[product.image]}
-                    alt={product.name}
-                  />
-                </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="font-headline text-2xl font-bold text-primary">{product.name}</h3>
-                    <p className="font-body text-on-surface-variant mt-1">{product.description}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          }
-
-          if (product.layout === 'products-portrait') {
-            return (
-              <div key={product.id} className="col-span-12 md:col-span-4 group mt-12">
-                <div className="relative overflow-hidden aspect-[3/4] mb-6 bg-surface-container-low">
-                  <img
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                    src={productImages[product.image]}
-                    alt={product.name}
-                  />
-                </div>
-                <div className="flex flex-col">
-                  {product.label && (
-                    <span className="font-label text-[10px] font-black tracking-[0.3em] text-primary/40 mb-2 uppercase">
-                      {product.label}
-                    </span>
-                  )}
-                  <h3 className="font-headline text-2xl font-bold text-primary">{product.name}</h3>
-                  <p className="font-body text-on-surface-variant mt-1">{product.description}</p>
-                </div>
-              </div>
-            );
-          }
-
-          if (product.layout === 'products-wide') {
-            return (
-              <div key={product.id} className="col-span-12 md:col-span-8 group mt-12 flex flex-col">
-                <div className="relative overflow-hidden aspect-[16/9] mb-6 bg-surface-container-highest">
-                  <img
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700"
-                    src={productImages[product.image]}
-                    alt={product.name}
-                  />
-                </div>
-                <div className="flex justify-between items-end border-t border-outline-variant/30 pt-6">
-                  <div>
-                    <h3 className="font-headline text-3xl font-bold text-primary">{product.name}</h3>
-                    <p className="font-body text-on-surface-variant mt-2 max-w-md">
-                      {product.description}
-                    </p>
-                  </div>
-                  <a className="flex items-center gap-2 font-headline font-bold text-primary group/link" href="#">
-                    Specifications
-                    <span className="material-symbols-outlined transition-transform group-hover/link:translate-x-1">
-                      arrow_right_alt
-                    </span>
-                  </a>
-                </div>
-              </div>
-            );
-          }
-
-          return null;
-        })}
+        {filteredProducts.length === 0 && (
+          <div className="text-center py-20">
+            <span className="material-symbols-outlined text-6xl text-outline-variant/30 mb-4 block">
+              search_off
+            </span>
+            <p className="text-on-surface-variant text-lg">
+              No products found matching your criteria.
+            </p>
+          </div>
+        )}
       </section>
 
-      {/* Texture Reveal Section */}
-      <section className="mt-32 relative h-[600px] w-full overflow-hidden flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <img
-            className="w-full h-full object-cover scale-110"
-            src={textureImg}
-            alt="Coir fiber texture"
-          />
-          <div className="absolute inset-0 bg-primary/80 mix-blend-multiply transition-opacity duration-1000 hover:opacity-40"></div>
-        </div>
-        <div className="relative z-10 text-center px-8">
-          <h2 className="font-headline text-4xl md:text-6xl font-black text-on-primary mb-6 tracking-tight">
-            The Future is Organic.
-          </h2>
-          <button className="bg-surface text-primary px-10 py-4 font-label font-bold tracking-widest text-sm hover:scale-105 transition-transform duration-300">
-            REQUEST PRODUCT CATALOGUE
-          </button>
+      {/* Technical Excellence / Bento Feature Section */}
+      <section className="max-w-7xl mx-auto px-8 mt-32 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+          <div className="md:col-span-2 md:row-span-2 bg-primary p-12 rounded-xl flex flex-col justify-end text-on-primary">
+            <span
+              className="material-symbols-outlined text-5xl mb-6"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              eco
+            </span>
+            <h2 className="font-headline text-4xl font-extrabold mb-4">
+              The Circular Advantage
+            </h2>
+            <p className="font-body text-on-primary opacity-80 leading-relaxed max-w-sm">
+              Our closed-loop processing ensures every coconut husk is utilized
+              to its maximum biological potential, reducing industrial waste by
+              94% across the supply chain.
+            </p>
+          </div>
+          <div className="md:col-span-2 bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 flex flex-col justify-center">
+            <div className="flex items-center gap-4 mb-2">
+              <span className="material-symbols-outlined text-primary">
+                biotech
+              </span>
+              <h4 className="font-headline font-bold text-lg">
+                Lab-Certified Quality
+              </h4>
+            </div>
+            <p className="text-on-surface-variant text-sm font-body">
+              Every batch undergoes rigorous ISO testing for EC levels, pH
+              balance, and fiber consistency to ensure crop safety.
+            </p>
+          </div>
+          <div className="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 flex flex-col items-center justify-center text-center">
+            <span className="text-4xl font-headline font-extrabold text-primary mb-1">
+              24M
+            </span>
+            <span className="text-xs font-label font-bold text-outline uppercase">
+              Liters Water Saved
+            </span>
+          </div>
+          <div className="bg-secondary-container p-8 rounded-xl flex flex-col items-center justify-center text-center">
+            <span className="text-4xl font-headline font-extrabold text-on-secondary-container mb-1">
+              100%
+            </span>
+            <span className="text-xs font-label font-bold text-on-secondary-container uppercase">
+              Plastic Free
+            </span>
+          </div>
         </div>
       </section>
     </main>
