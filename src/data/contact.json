@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "tagline": "GLOBAL PARTNERSHIPS",
+    "heading": "Let's Cultivate",
+    "headingHighlight": "Sustainability.",
+    "description": "Whether you're looking for global fiber export or bespoke agricultural solutions, our curators are ready to bridge the gap between earth and industry."
+  },
+  "phone": {
+    "label": "REACH US",
+    "number": "+91 (422) 234-9800",
+    "hours": "Mon — Sat, 9:00am - 6:00pm IST"
+  },
+  "address": {
+    "label": "VISIT THE MILL",
+    "lines": [
+      "Suriyacoir Industrial Estate,",
+      "Pollachi High Road,",
+      "Coimbatore, Tamil Nadu 641021"
+    ]
+  },
+  "email": {
+    "label": "DIGITAL CONNECT",
+    "address": "hello@suriyacoir.com"
+  },
+  "logistics": [
+    {
+      "region": "Export to Europe",
+      "status": "Active"
+    },
+    {
+      "region": "Americas Logistics",
+      "status": "Active"
+    },
+    {
+      "region": "Asia-Pacific Supply",
+      "status": "Active"
+    }
+  ],
+  "inquiryTypes": [
+    "Global Export",
+    "Bulk Fiber Sourcing",
+    "Sustainability Consulting",
+    "Media Inquiry"
+  ],
+  "textureImage": "/src/assets/contact-coir-texture.jpg",
+  "mapImage": "/src/assets/contact-map-bg.jpg"
+}

@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "tagline": "Our Story",
+    "heading": "Crafted by Nature,",
+    "headingHighlight": "Hands.",
+    "description": "We don't just process materials. We document the transformation of raw coconut husk into the world's most sustainable architectural fiber."
+  },
+  "mission": {
+    "icon": "eco",
+    "title": "The Mission",
+    "description": "To bridge the gap between industrial necessity and ecological integrity. We repurpose agricultural waste into high-performance materials that give back to the soil from which they came."
+  },
+  "vision": {
+    "icon": "visibility",
+    "title": "The Vision",
+    "description": "A world where every structure is supported by the living loom of nature. We strive to be the global standard for carbon-negative architectural substrates by 2030."
+  },
+  "founder": {
+    "label": "The Hands Behind the Fiber",
+    "heading": "A Legacy Rooted in the Soil.",
+    "description": "Founder Elara Vance spent two decades in the coastal plantations of Kerala, witnessing the untapped potential of the coconut husk. What others saw as waste, Elara saw as a structural miracle.",
+    "stats": [
+      { "value": "240k+", "label": "Husks Recycled" },
+      { "value": "15", "label": "Global Patents" }
+    ],
+    "quote": "Sustainability isn't a feature; it's the fundamental architecture of everything we build."
+  },
+  "milestones": {
+    "heading": "Our Growth Rings",
+    "description": "Like the palms we harvest from, our journey is marked by steady, organic growth.",
+    "items": [
+      {
+        "number": "01",
+        "title": "The Seedling (2012)",
+        "description": "First extraction facility established in the coastal belts, focusing on raw fiber purity and local artisan partnership.",
+        "color": "primary"
+      },
+      {
+        "number": "02",
+        "title": "The Synthesis (2018)",
+        "description": "Developed our proprietary organic binding synthesis, allowing coir to be used in high-load architectural panels.",
+        "color": "secondary"
+      },
+      {
+        "number": "03",
+        "title": "Global Canopy (2024)",
+        "description": "Opening our flagship sustainable lab in Zurich, bringing tropical engineering to the heart of European design.",
+        "color": "primary"
+      }
+    ]
+  }
+}

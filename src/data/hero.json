@@ -1,0 +1,23 @@
+{
+  "tagline": "Sustainability First",
+  "heading": "Sustainable",
+  "headingHighlight": "Coir",
+  "headingEnd": "Solutions for a Greener Future",
+  "description": "Crafting the finest organic fibers from nature's bounty. Our coir products bridge the gap between industrial strength and ecological harmony.",
+  "ctaPrimary": "Explore Collections",
+  "ctaSecondary": "Our Process",
+  "introHeading": "Rooted in Earth,",
+  "introHeadingLine2": "Refined by Tradition.",
+  "introFeatures": [
+    {
+      "icon": "eco",
+      "title": "100% Biodegradable",
+      "description": "Every strand returns to the earth, leaving zero footprint and nurturing the soil for the next generation."
+    },
+    {
+      "icon": "handshake",
+      "title": "Ethically Sourced",
+      "description": "We partner directly with coastal farming communities, ensuring fair wages and sustainable harvesting."
+    }
+  ]
+}

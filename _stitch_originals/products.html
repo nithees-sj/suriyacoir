@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              "outline": "#717976",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#bbcac4",
+              "primary-fixed": "#c5eadf",
+              "surface-container-highest": "#e3e2e1",
+              "on-surface": "#1a1c1b",
+              "on-secondary-fixed": "#121e1b",
+              "surface-variant": "#e3e2e1",
+              "tertiary-fixed": "#ffdad3",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#2b4d44",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#aacec3",
+              "inverse-surface": "#2f3130",
+              "primary-container": "#1a3c34",
+              "on-primary-container": "#83a69c",
+              "on-tertiary-container": "#c4948a",
+              "surface-bright": "#faf9f7",
+              "surface-container": "#eeeeec",
+              "surface-dim": "#dadad8",
+              "background": "#faf9f7",
+              "surface-tint": "#43655c",
+              "on-secondary-fixed-variant": "#3c4945",
+              "on-tertiary-fixed-variant": "#623d36",
+              "on-primary-fixed": "#00201a",
+              "tertiary-fixed-dim": "#efbab0",
+              "secondary-container": "#d7e6e0",
+              "inverse-on-surface": "#f1f1ef",
+              "outline-variant": "#c1c8c4",
+              "tertiary-container": "#4f2d26",
+              "on-tertiary-fixed": "#30130d",
+              "on-error": "#ffffff",
+              "tertiary": "#361812",
+              "secondary": "#54615d",
+              "surface-container-high": "#e8e8e6",
+              "primary": "#01261f",
+              "on-surface-variant": "#414846",
+              "secondary-fixed": "#d7e6e0",
+              "on-background": "#1a1c1b",
+              "surface": "#faf9f7",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#5a6763",
+              "primary-fixed-dim": "#aacec3",
+              "surface-container-low": "#f4f4f2"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f7]/80 dark:bg-[#01261f]/80 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+<a class="text-2xl font-black tracking-tighter text-[#01261f] dark:text-[#faf9f7] font-['Epilogue']" href="#">
+                Veda Coir
+            </a>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Epilogue'] tracking-tight font-bold text-[#01261f]/60 dark:text-[#faf9f7]/60 hover:scale-105 hover:text-[#01261f] transition-all duration-300 ease-out" href="#">Home</a>
+<a class="font-['Epilogue'] tracking-tight font-bold text-[#01261f]/60 dark:text-[#faf9f7]/60 hover:scale-105 hover:text-[#01261f] transition-all duration-300 ease-out" href="#">About</a>
+<a class="font-['Epilogue'] tracking-tight font-bold text-[#01261f] dark:text-[#faf9f7] border-b-2 border-[#01261f] dark:border-[#faf9f7] pb-1 hover:scale-105 transition-all duration-300 ease-out" href="#">Products</a>
+<a class="font-['Epilogue'] tracking-tight font-bold text-[#01261f]/60 dark:text-[#faf9f7]/60 hover:scale-105 hover:text-[#01261f] transition-all duration-300 ease-out" href="#">Sustainability</a>
+<a class="font-['Epilogue'] tracking-tight font-bold text-[#01261f]/60 dark:text-[#faf9f7]/60 hover:scale-105 hover:text-[#01261f] transition-all duration-300 ease-out" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-sm font-label font-bold tracking-tight hover:scale-105 transition-transform duration-300">
+                Inquire Now
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-24 flex flex-col md:flex-row items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-xs font-bold tracking-[0.2em] text-primary/60 mb-4 block">CURATED COLLECTION</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-primary">
+                    Organic Fiber <br/> Engineering.
+                </h1>
+</div>
+<div class="max-w-xs text-on-surface-variant mb-4">
+<p class="body-lg">Precision-milled sustainable materials crafted for high-performance architectural and industrial applications.</p>
+</div>
+</header>
+<!-- Category Tabs -->
+<section class="mb-16 overflow-x-auto">
+<div class="flex items-center space-x-12 border-b border-outline-variant/20 pb-4">
+<button class="font-headline text-lg font-bold text-primary relative after:absolute after:-bottom-[17px] after:left-0 after:w-full after:h-[2px] after:bg-primary">All Materials</button>
+<button class="font-headline text-lg font-bold text-on-surface-variant/40 hover:text-primary transition-colors">Raw Fiber</button>
+<button class="font-headline text-lg font-bold text-on-surface-variant/40 hover:text-primary transition-colors">Woven Geotextiles</button>
+<button class="font-headline text-lg font-bold text-on-surface-variant/40 hover:text-primary transition-colors">Pith Blocks</button>
+<button class="font-headline text-lg font-bold text-on-surface-variant/40 hover:text-primary transition-colors">Husk Chips</button>
+</div>
+</section>
+<!-- Product Grid: Editorial Layout -->
+<section class="editorial-grid">
+<!-- Product 1: Feature Large -->
+<div class="col-span-12 md:col-span-8 group">
+<div class="relative overflow-hidden aspect-[16/9] mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" data-alt="Macro close-up of high-density natural coir fiber texture with rich earthy tones and dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALyAGPLQY-Zz_Zh3oiRT8mYESIHWwNfugpRctysghv-w12130MSzoIeSJfTL1HJiKHKaR_uaU3xCDS8-mK-0bfYJotyNqKekVphmUO3kBvYIKU-TGuEwsUsnoSJYoor33mjcEJ0UZrgb4_TsRbYAD9npF3RnQDbxUcMfdQRJDU5EIFPyhPWuZrcW57g70ILbcY8s7GHmZk-2SGBzXrU0ZTw_5_R6P1AFDQQ-uDuhrO1IsERp07Zid1D1J0FCM_LUZnWeRwb0pcNZ4"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-primary">Architectural Geotextile X-400</h3>
+<p class="font-body text-on-surface-variant mt-1">High-tensile strength woven erosion control fabric.</p>
+</div>
+<span class="font-label text-sm font-bold tracking-widest text-primary">01 / FIBER</span>
+</div>
+</div>
+<!-- Product 2: Side Square -->
+<div class="col-span-12 md:col-span-4 group flex flex-col justify-end">
+<div class="relative overflow-hidden aspect-square mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Compressed rectangular coco pith blocks stacked neatly in a sunlit warehouse with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrt934rrYeD9B0-xkP6duPfd95BABRLNRY2uAFzwL9A6MhuWF_r2FK4ROHkUzVLH6-wdxmKdBWIP-djtqAA03i4Js5hDbrXP9SNaKUOOiqR6l7SNKYdszz04SbWOSx_bkSD2ORWkWaciUV0Sxx6u3sY9e_Esalc_Qnez46fOztWnHggq9_J6gkNbnAQxuZX8jAYx-jGnDTniNDihLs3MnhVEWcVLlBfhnOu2pqzjS-Gwilr3ScunhIAxpG8W6u-horvYZ8W_J-5fQ"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-primary">Organic Pith Blocks</h3>
+<p class="font-body text-on-surface-variant mt-1">Precision-compressed 5kg blocks.</p>
+</div>
+</div>
+</div>
+<!-- Product 3: Portrait -->
+<div class="col-span-12 md:col-span-4 group mt-12">
+<div class="relative overflow-hidden aspect-[3/4] mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Handcrafted coir brush and raw husk fragments on a clean white minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwBCm1GRdzQLKQpfU8Co5NSQZQPRHQNTfEhAj3lKTzwcuhdQPh44oITWbM8z3VYr_CWQKcxm7Cm94-VBO5gfTnusv92dKSb2-_g2vFbSANT6SKz29bBPBQbVyYRNzxHqOb4mdPhVUxdviEap0kziJcq4bGXz5r409NHjS2iBfC5NRZRJ7sqKfh7pghNoyGcoieB9NxcuLn54gTFAy_c2ZV_4DiavulA6CGbNlfkMnQxI6zGiYXNdpdUtVp1nhPmetFJ8eD-TtZrUs"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-[10px] font-black tracking-[0.3em] text-primary/40 mb-2 uppercase">Limited Export</span>
+<h3 class="font-headline text-2xl font-bold text-primary">Artisan Fiber Husk</h3>
+<p class="font-body text-on-surface-variant mt-1">Double-cleaned premium golden fiber.</p>
+</div>
+</div>
+<!-- Product 4: Wide -->
+<div class="col-span-12 md:col-span-8 group mt-12 flex flex-col">
+<div class="relative overflow-hidden aspect-[16/9] mb-6 bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700" data-alt="Landscape view of a sustainable coconut farm at dawn with misty atmosphere and soft green hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKYjbyDFdCUbUzzlKr9mjHZp8eRJOrLlBbW83OI2VabjNyEL0n4jUF5srbg5TzxwEjgkS017FnJ6EFfAZe7C6uDqRIOYiStHjGIcXR2XWMhPfIYR1trUS-6AyvtDsCa5sNH6niTFFqQ9SSm6DIHk5bEGlvuQMM47Xszxl2FeF-HMLxvILUlrCF4Ma16nNVksY2w6ay38CLz-ffYIiGIjfrSJWPMW56E_k_yUaC9AoEyDXxJp64BKmk8ZYRrdBnIxH-cDCSLegrt8"/>
+</div>
+<div class="flex justify-between items-end border-t border-outline-variant/30 pt-6">
+<div>
+<h3 class="font-headline text-3xl font-bold text-primary">Industrial Grade Mulch</h3>
+<p class="font-body text-on-surface-variant mt-2 max-w-md">Sustainable ground cover engineered for large-scale landscaping and industrial insulation.</p>
+</div>
+<a class="flex items-center gap-2 font-headline font-bold text-primary group/link" href="#">
+                        Specifications 
+                        <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Signature Texture Reveal Section -->
+<section class="mt-32 relative h-[600px] w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover scale-110" data-alt="Macro texture of interlaced coir fibers creating a complex organic pattern with deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoCeiU5kIwGW_ZcV_x5zXragGeVxdwPefK8VpUFf5MYXiFvHXHgCdzlxTllpgBSh2irke_4Jufbud0rK--cnx3BPeGjizVFr9cRQeNeTn5Qtuw4rAhVouUu1P3reNg8c67wq84i47DO7tIwXAF8TpwJ4i5uRhcjh9Fbvrkw_X22WvcSKC4j1bepgFkHbMoxpxjS9iHdG-Z2bJ0T5eBAbOFoTs7KnJvTm6-TiHjOCXq9J4bUbFbQXaHj8rcTvZXroVVKXYJWA95WJM"/>
+<div class="absolute inset-0 bg-primary/80 mix-blend-multiply transition-opacity duration-1000 hover:opacity-40"></div>
+</div>
+<div class="relative z-10 text-center px-8">
+<h2 class="font-headline text-4xl md:text-6xl font-black text-on-primary mb-6 tracking-tight">The Future is Organic.</h2>
+<button class="bg-surface text-primary px-10 py-4 font-label font-bold tracking-widest text-sm hover:scale-105 transition-transform duration-300">
+                    REQUEST PRODUCT CATALOGUE
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#01261f] dark:bg-[#01261f] w-full py-16 px-8">
+<div class="flex flex-col md:flex-row justify-between items-start max-w-7xl mx-auto space-y-12 md:space-y-0">
+<div class="flex flex-col space-y-6">
+<span class="text-xl font-bold text-[#faf9f7] font-['Epilogue'] tracking-tighter">Veda Coir Mill.</span>
+<p class="text-[#faf9f7]/70 font-['Manrope'] text-sm max-w-xs leading-relaxed">
+                    Crafting superior organic materials through sustainable innovation and centuries-old expertise.
+                </p>
+<p class="text-[#faf9f7] font-['Manrope'] text-sm tracking-wide">
+                    © 2024 Veda Coir Mill. Handcrafted Sustainability.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col space-y-4">
+<span class="text-[#faf9f7] font-bold text-xs tracking-widest uppercase">Company</span>
+<a class="text-[#faf9f7]/70 font-['Manrope'] text-sm hover:text-[#ffffff] transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-[#faf9f7]/70 font-['Manrope'] text-sm hover:text-[#ffffff] transition-colors duration-300" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="text-[#faf9f7] font-bold text-xs tracking-widest uppercase">Global</span>
+<a class="text-[#faf9f7]/70 font-['Manrope'] text-sm hover:text-[#ffffff] transition-colors duration-300" href="#">Fiber Sourcing</a>
+<a class="text-[#faf9f7]/70 font-['Manrope'] text-sm hover:text-[#ffffff] transition-colors duration-300" href="#">Global Export</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

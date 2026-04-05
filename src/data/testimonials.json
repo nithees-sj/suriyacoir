@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Sarah Jenkins",
+    "company": "Landscape Designer",
+    "message": "The durability of their garden mats is unparalleled. After two winters, they still look as fresh as day one.",
+    "avatar": "home-client-sarah"
+  },
+  {
+    "name": "Marcus Thorne",
+    "company": "CEO, EcoBuild Global",
+    "message": "We switched our entire supply chain to Organic Synthesis. Their commitment to ethical sourcing matches our core brand values perfectly.",
+    "avatar": "home-client-marcus",
+    "featured": true
+  },
+  {
+    "name": "David Chen",
+    "company": "Home Curator",
+    "message": "Elegant and functional. The aesthetic of their coir brushes brings a sense of artisanal luxury to everyday tasks.",
+    "avatar": "home-client-david"
+  }
+]

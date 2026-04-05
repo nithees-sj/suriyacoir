@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Horticulture Coir",
+    "image": "/src/assets/horticulture-coir.jpg",
+    "description": "Maximum aeration for commercial nurseries and high-yield farming.",
+    "label": "",
+    "layout": "feature-large"
+  },
+  {
+    "id": 2,
+    "name": "Geo-Textiles",
+    "image": "/src/assets/geo-textiles.jpg",
+    "description": "Biodegradable soil stabilization solutions.",
+    "label": "",
+    "layout": "side-square"
+  },
+  {
+    "id": 3,
+    "name": "Industrial Fiber",
+    "image": "/src/assets/industrial-fiber.jpg",
+    "description": "Resilient natural fiber for upholstery and matting.",
+    "label": "",
+    "layout": "side-square"
+  },
+  {
+    "id": 4,
+    "name": "Architectural Geotextile X-400",
+    "image": "/src/assets/geotextile-product.jpg",
+    "description": "High-tensile strength woven erosion control fabric.",
+    "label": "01 / FIBER",
+    "layout": "products-feature"
+  },
+  {
+    "id": 5,
+    "name": "Organic Pith Blocks",
+    "image": "/src/assets/pith-blocks.jpg",
+    "description": "Precision-compressed 5kg blocks.",
+    "label": "",
+    "layout": "products-side"
+  },
+  {
+    "id": 6,
+    "name": "Artisan Fiber Husk",
+    "image": "/src/assets/artisan-fiber.jpg",
+    "description": "Double-cleaned premium golden fiber.",
+    "label": "Limited Export",
+    "layout": "products-portrait"
+  },
+  {
+    "id": 7,
+    "name": "Industrial Grade Mulch",
+    "image": "/src/assets/coconut-farm.jpg",
+    "description": "Sustainable ground cover engineered for large-scale landscaping and industrial insulation.",
+    "label": "",
+    "layout": "products-wide"
+  }
+]
