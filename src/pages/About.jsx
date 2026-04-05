@@ -4,7 +4,7 @@ import aboutData from '../data/about.json';
 import rawHusksImg from '../assets/about-raw-husks.jpg';
 import coirFibersCloseupImg from '../assets/about-coir-fibers-closeup.jpg';
 import founderGardenImg from '../assets/about-founder-garden.jpg';
-import plantationDawnImg from '../assets/about-plantation-dawn.jpg';
+import plantationDawnImg from '../assets/about-plantation-dawn.png';
 import dryingFibersImg from '../assets/about-drying-fibers.jpg';
 import coirTextileImg from '../assets/about-coir-textile.jpg';
 
@@ -63,33 +63,40 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Mission & Vision: Tonal Shift */}
-      <section className="py-32 bg-surface-container-low rounded-t-[5rem]">
+      {/* Milestones: Curved Timeline Layout */}
+      <section className="py-32 bg-surface-container-highest/30 rounded-b-[5rem]">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-            <div className="p-12 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <span className="material-symbols-outlined text-4xl text-secondary mb-6">
-                {mission.icon}
-              </span>
-              <h2 className="text-3xl font-bold text-primary mb-6">{mission.title}</h2>
-              <p className="text-lg text-on-surface-variant leading-relaxed">
-                {mission.description}
-              </p>
-            </div>
-            <div className="p-12 bg-tertiary-container text-on-tertiary-container rounded-xl shadow-sm">
-              <span className="material-symbols-outlined text-4xl text-on-tertiary-container mb-6">
-                {vision.icon}
-              </span>
-              <h2 className="text-3xl font-bold mb-6">{vision.title}</h2>
-              <p className="text-lg leading-relaxed opacity-90">
-                {vision.description}
-              </p>
-            </div>
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <h2 className="text-4xl font-bold text-primary mb-4">{milestones.heading}</h2>
+            <p className="text-on-surface-variant">{milestones.description}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {milestones.items.map((item, i) => (
+              <div
+                key={i}
+                className={`relative p-10 bg-surface-container-lowest rounded-[3rem] border border-outline-variant/10 shadow-sm hover:-translate-y-2 transition-transform ${
+                  i === 1 ? 'md:mt-12' : ''
+                }`}
+              >
+                <div
+                  className={`absolute top-0 right-10 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl ${
+                    item.color === 'primary'
+                      ? 'bg-primary text-on-primary'
+                      : 'bg-secondary text-on-secondary'
+                  }`}
+                >
+                  {item.number}
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
+      
       {/* The Founder & Heritage: Asymmetric Editorial */}
       <section className="py-32 bg-surface">
         <div className="max-w-7xl mx-auto px-8">
@@ -132,36 +139,28 @@ export default function About() {
         </div>
       </section>
 
-      {/* Milestones: Curved Timeline Layout */}
-      <section className="py-32 bg-surface-container-highest/30 rounded-b-[5rem]">
+      {/* Mission & Vision: Tonal Shift */}
+      <section className="py-32 bg-surface-container-low rounded-t-[5rem]">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center max-w-2xl mx-auto mb-20">
-            <h2 className="text-4xl font-bold text-primary mb-4">{milestones.heading}</h2>
-            <p className="text-on-surface-variant">{milestones.description}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {milestones.items.map((item, i) => (
-              <div
-                key={i}
-                className={`relative p-10 bg-surface-container-lowest rounded-[3rem] border border-outline-variant/10 shadow-sm hover:-translate-y-2 transition-transform ${
-                  i === 1 ? 'md:mt-12' : ''
-                }`}
-              >
-                <div
-                  className={`absolute top-0 right-10 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl ${
-                    item.color === 'primary'
-                      ? 'bg-primary text-on-primary'
-                      : 'bg-secondary text-on-secondary'
-                  }`}
-                >
-                  {item.number}
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+            <div className="p-12 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <span className="material-symbols-outlined text-4xl text-secondary mb-6">
+                {mission.icon}
+              </span>
+              <h2 className="text-3xl font-bold text-primary mb-6">{mission.title}</h2>
+              <p className="text-lg text-on-surface-variant leading-relaxed">
+                {mission.description}
+              </p>
+            </div>
+            <div className="p-12 bg-tertiary-container text-on-tertiary-container rounded-xl shadow-sm">
+              <span className="material-symbols-outlined text-4xl text-on-tertiary-container mb-6">
+                {vision.icon}
+              </span>
+              <h2 className="text-3xl font-bold mb-6">{vision.title}</h2>
+              <p className="text-lg leading-relaxed opacity-90">
+                {vision.description}
+              </p>
+            </div>
           </div>
         </div>
       </section>
