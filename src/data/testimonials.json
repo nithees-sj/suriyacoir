@@ -1,21 +1,21 @@
 [
   {
-    "name": "Sarah Jenkins",
-    "company": "Landscape Designer",
-    "message": "The durability of their garden mats is unparalleled. After two winters, they still look as fresh as day one.",
-    "avatar": "home-client-sarah"
+    "name": "Mahatma Gandhi",
+    "company": "Father of the Nation",
+    "message": "The Earth provides enough to satisfy every man's needs, but not every man's greed.",
+    "avatar": "gandhi"
   },
   {
-    "name": "Marcus Thorne",
-    "company": "CEO, EcoBuild Global",
-    "message": "We switched our entire supply chain to Organic Synthesis. Their commitment to ethical sourcing matches our core brand values perfectly.",
-    "avatar": "home-client-marcus",
+    "name": "Wangari Maathai",
+    "company": "Nobel Peace Prize Laureate",
+    "message": "It's the little things citizens do. That's what will make the difference.",
+    "avatar": "wangari",
     "featured": true
   },
   {
-    "name": "David Chen",
-    "company": "Home Curator",
-    "message": "Elegant and functional. The aesthetic of their coir brushes brings a sense of artisanal luxury to everyday tasks.",
-    "avatar": "home-client-david"
+    "name": "Paul Hawken",
+    "company": "American Environmentalist",
+    "message": "Good business is the best way to solve environmental problems.",
+    "avatar": "paul"
   }
 ]

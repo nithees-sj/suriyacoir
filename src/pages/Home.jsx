@@ -10,14 +10,14 @@ import plantationImg from '../assets/home-plantation.jpg';
 import ropesImg from '../assets/home-ropes.jpg';
 import brushesImg from '../assets/home-brushes.jpg';
 import matsImg from '../assets/home-mats.jpg';
-import clientSarahImg from '../assets/home-client-sarah.jpg';
-import clientMarcusImg from '../assets/home-client-marcus.jpg';
-import clientDavidImg from '../assets/home-client-david.jpg';
+import gandhiImg from '../assets/gandhi.jpg';
+import wangariImg from '../assets/wangari.jpg';
+import paulImg from '../assets/paul.jpeg';
 
 const clientAvatars = {
-  'home-client-sarah': clientSarahImg,
-  'home-client-marcus': clientMarcusImg,
-  'home-client-david': clientDavidImg,
+  'gandhi': gandhiImg,
+  'wangari': wangariImg,
+  'paul': paulImg,
 };
 
 const carouselItems = [
