@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyLink = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('https://suriyacoir.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   return (
     <footer className="w-full bg-stone-100 relative overflow-hidden mt-10">
       {/* Large green watermark */}
@@ -24,7 +33,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://suriyacoir.com"
                 className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center hover:bg-primary/10 transition-colors group"
               >
                 <span className="material-symbols-outlined text-lg text-emerald-800/60 group-hover:text-emerald-900 transition-colors">
@@ -32,48 +41,22 @@ export default function Footer() {
                 </span>
               </a>
               <a
-                href="#"
+                href="/contact"
                 className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center hover:bg-primary/10 transition-colors group"
               >
                 <span className="material-symbols-outlined text-lg text-emerald-800/60 group-hover:text-emerald-900 transition-colors">
                   mail
                 </span>
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center hover:bg-primary/10 transition-colors group"
+              <button
+                onClick={handleCopyLink}
+                className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center hover:bg-primary/10 transition-colors group cursor-pointer"
+                aria-label="Share website link"
               >
                 <span className="material-symbols-outlined text-lg text-emerald-800/60 group-hover:text-emerald-900 transition-colors">
-                  share
+                  {copied ? 'check' : 'share'}
                 </span>
-              </a>
-            </div>
-          </div>
-
-          {/* Solutions */}
-          <div className="md:col-span-2">
-            <p className="font-bold text-emerald-900 text-xs uppercase tracking-[0.15em] mb-5">
-              Solutions
-            </p>
-            <div className="space-y-3">
-              <Link
-                to="/about"
-                className="block text-emerald-800/50 hover:text-emerald-700 transition-colors text-sm"
-              >
-                Sustainability Report
-              </Link>
-              <Link
-                to="/products"
-                className="block text-emerald-800/50 hover:text-emerald-700 transition-colors text-sm"
-              >
-                Process &amp; Engineering
-              </Link>
-              <Link
-                to="/products"
-                className="block text-emerald-800/50 hover:text-emerald-700 transition-colors text-sm"
-              >
-                Product Catalog
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -122,38 +105,48 @@ export default function Footer() {
               >
                 Terms of Service
               </a>
-              <a
-                href="#"
-                className="block text-emerald-800/50 hover:text-emerald-700 transition-colors text-sm"
-              >
-                Cookie Policy
-              </a>
             </div>
           </div>
 
-          {/* Newsletter / Connect */}
-          <div className="md:col-span-2">
+          {/* Developer */}
+          <div className="md:col-span-4">
             <p className="font-bold text-emerald-900 text-xs uppercase tracking-[0.15em] mb-5">
-              Stay Updated
+              Development
             </p>
-            <p className="text-emerald-800/50 text-xs mb-4 leading-relaxed">
-              Get the latest on sustainable coir innovations.
-            </p>
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-100 to-stone-100 flex items-center justify-center border border-emerald-900/10 shadow-[inset_0_2px_10px_rgba(0,0,0,0.02)] shrink-0">
+                  <span className="font-headline font-black text-emerald-950 text-lg">NS</span>
+                </div>
+                <div>
+                  <p className="font-headline text-emerald-950 font-bold mb-0.5 tracking-tight text-base">Nithees SJ</p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <a
+                  href="https://www.linkedin.com/in/nithees-sj/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex-1 flex items-center justify-center gap-2 rounded-full bg-emerald-900/5 px-4 py-2 text-[10px] uppercase tracking-widest font-semibold text-emerald-900/60 transition-all duration-300 hover:bg-emerald-900/10 hover:text-emerald-950 backdrop-blur-sm"
+                >
+                  LinkedIn
+                  <span className="material-symbols-outlined text-[14px] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
+                </a>
+                <a
+                  href="https://nitheessj.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex-1 flex items-center justify-center gap-2 rounded-full bg-emerald-900/5 px-4 py-2 text-[10px] uppercase tracking-widest font-semibold text-emerald-900/60 transition-all duration-300 hover:bg-emerald-900/10 hover:text-emerald-950 backdrop-blur-sm"
+                >
+                  Portfolio
+                  <span className="material-symbols-outlined text-[14px] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-emerald-900/5 relative z-10">
-        <div className="max-w-7xl mx-auto px-8 md:px-12 py-5 flex flex-col md:flex-row justify-between items-center gap-2">
-          <p className="text-emerald-900/40 font-body text-xs tracking-wide">
-            © 2024 Suriya Coir Mill. Crafted for the Earth.
-          </p>
-          <p className="text-emerald-900/30 font-body text-[11px] tracking-wide">
-            Handcrafted with care from the coastal plantations of India.
-          </p>
-        </div>
-      </div>
     </footer>
   );
 }

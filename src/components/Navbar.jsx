@@ -19,7 +19,7 @@ export default function Navbar() {
           to="/"
           className="text-2xl font-bold text-emerald-950 tracking-tighter font-headline"
         >
-          Suriya Coir
+          Suriya Coirs
         </Link>
 
         {/* Desktop Links */}
@@ -42,13 +42,6 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* CTA Button */}
-        <Link
-          to="/contact"
-          className="hidden md:block bg-primary hover:bg-primary-container text-on-primary px-8 py-3 rounded-full font-bold transition-transform hover:scale-95 active:scale-90"
-        >
-          Get a Quote
-        </Link>
 
         {/* Mobile Menu Button */}
         <button

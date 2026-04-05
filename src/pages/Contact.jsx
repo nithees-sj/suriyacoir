@@ -1,223 +1,128 @@
-import contactData from '../data/contact.json';
-
-import contactTextureImg from '../assets/contact-coir-texture.jpg';
-import contactMapImg from '../assets/contact-map-bg.jpg';
-
 export default function Contact() {
-  const { hero, phone, address, email, logistics, inquiryTypes, textureImage, mapImage } = contactData;
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form submission logic
     alert('Thank you for your message! We will get back to you soon.');
   };
 
   return (
-    <main className="pt-32 pb-0">
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-8 mb-24">
-        <div className="editorial-grid gap-8 items-end">
-          <div className="col-span-12 md:col-span-8">
-            <span className="inline-block text-xs text-primary tracking-[0.2em] font-bold mb-6">
-              {hero.tagline}
-            </span>
-            <h1 className="text-6xl md:text-8xl font-headline font-black text-primary leading-[0.9] tracking-tighter">
-              {hero.heading} <br />
-              <span className="text-outline-variant/60">{hero.headingHighlight}</span>
+    <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto min-h-screen z-10 relative">
+      <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 mb-24">
+        <div className="lg:col-span-5 space-y-12">
+          <div>
+            <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight mb-6">
+              Get in <span className="text-primary italic">touch</span>
             </h1>
-          </div>
-          <div className="col-span-12 md:col-span-4 pb-4">
-            <p className="text-lg text-secondary leading-relaxed font-medium">
-              {hero.description}
+            <p className="text-on-surface-variant text-lg leading-relaxed max-w-md">
+              Inquiries regarding bulk logistics, sustainability certifications, or high-precision coir processing.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="bg-surface-container-low py-24">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col lg:flex-row gap-16">
-            {/* Contact Form Card */}
-            <div className="flex-1 bg-surface-container-lowest p-12 lg:p-16 rounded-lg shadow-[0_20px_40px_-5px_rgba(26,28,27,0.04)]">
-              <h2 className="text-3xl font-headline font-bold text-primary mb-12">
-                Send a Message
-              </h2>
-              <form className="space-y-12" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="relative">
-                    <input
-                      className="peer w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 focus:ring-0 focus:border-primary transition-all duration-300 text-on-surface"
-                      id="name"
-                      placeholder=" "
-                      type="text"
-                    />
-                    <label
-                      className="absolute left-0 top-3 text-secondary font-medium transition-all duration-300 pointer-events-none peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs"
-                      htmlFor="name"
-                    >
-                      Full Name
-                    </label>
-                  </div>
-                  <div className="relative">
-                    <input
-                      className="peer w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 focus:ring-0 focus:border-primary transition-all duration-300 text-on-surface"
-                      id="email"
-                      placeholder=" "
-                      type="email"
-                    />
-                    <label
-                      className="absolute left-0 top-3 text-secondary font-medium transition-all duration-300 pointer-events-none peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs"
-                      htmlFor="email"
-                    >
-                      Email Address
-                    </label>
-                  </div>
-                </div>
-                <div className="relative">
-                  <select
-                    className="peer w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 focus:ring-0 focus:border-primary transition-all duration-300 text-on-surface appearance-none"
-                    id="subject"
-                    defaultValue=""
-                  >
-                    <option disabled value="">
-                      Select Inquiry Type
-                    </option>
-                    {inquiryTypes.map((type, i) => (
-                      <option key={i}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="relative">
-                  <textarea
-                    className="peer w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 focus:ring-0 focus:border-primary transition-all duration-300 text-on-surface resize-none"
-                    id="message"
-                    placeholder=" "
-                    rows="4"
-                  ></textarea>
-                  <label
-                    className="absolute left-0 top-3 text-secondary font-medium transition-all duration-300 pointer-events-none peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs"
-                    htmlFor="message"
-                  >
-                    Your Message
-                  </label>
-                </div>
-                <button
-                  className="group flex items-center gap-4 bg-primary text-on-primary px-10 py-5 font-headline font-bold text-lg hover:bg-primary-container transition-all duration-500 rounded-sm"
-                  type="submit"
-                >
-                  Dispatch Message
-                  <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform duration-300">
-                    arrow_forward
-                  </span>
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Info & Texture Section */}
-            <div className="w-full lg:w-[400px] flex flex-col gap-8">
-              {/* Info Bento */}
-              <div className="bg-primary p-10 text-on-primary rounded-lg space-y-10">
-                <div>
-                  <span className="text-xs text-on-primary/60 tracking-[0.15em] font-bold block mb-4">
-                    {phone.label}
-                  </span>
-                  <h3 className="text-2xl font-headline font-bold mb-2">{phone.number}</h3>
-                  <p className="text-on-primary/70">{phone.hours}</p>
-                </div>
-                <div className="h-px bg-on-primary/10"></div>
-                <div>
-                  <span className="text-xs text-on-primary/60 tracking-[0.15em] font-bold block mb-4">
-                    {address.label}
-                  </span>
-                  <p className="text-xl font-medium leading-relaxed">
-                    {address.lines.map((line, i) => (
-                      <span key={i}>
-                        {line}
-                        {i < address.lines.length - 1 && <br />}
-                      </span>
-                    ))}
-                  </p>
-                </div>
-                <div className="h-px bg-on-primary/10"></div>
-                <div>
-                  <span className="text-xs text-on-primary/60 tracking-[0.15em] font-bold block mb-4">
-                    {email.label}
-                  </span>
-                  <a
-                    className="text-xl font-bold border-b border-on-primary/30 hover:border-on-primary transition-colors"
-                    href={`mailto:${email.address}`}
-                  >
-                    {email.address}
-                  </a>
-                </div>
+          
+          <div className="space-y-8">
+            <div className="flex items-start gap-4">
+              <div className="bg-secondary-container p-3 rounded-xl text-on-secondary-container">
+                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
               </div>
-
-              {/* Texture Card */}
-              <div className="relative h-64 lg:h-full min-h-[300px] rounded-lg overflow-hidden group">
-                <img
-                  alt="Raw coir fiber texture"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src={contactTextureImg}
-                />
-                <div className="absolute inset-0 texture-reveal-overlay mix-blend-multiply opacity-80 group-hover:opacity-40 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <span className="text-on-primary font-headline text-2xl font-black leading-tight">
-                    Raw Integrity. <br />
-                    Refined Process.
-                  </span>
-                </div>
+              <div>
+                <h3 className="font-headline font-bold text-lg text-on-surface">Office Location</h3>
+                <p className="text-on-surface-variant">Kallipatti, Tamil Nadu 642120<br/></p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="bg-secondary-container p-3 rounded-xl text-on-secondary-container">
+                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+              </div>
+              <div>
+                <h3 className="font-headline font-bold text-lg text-on-surface">Direct Line</h3>
+                <p className="text-on-surface-variant">+91 93844 49025</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="bg-secondary-container p-3 rounded-xl text-on-secondary-container">
+                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>mail</span>
+              </div>
+              <div>
+                <h3 className="font-headline font-bold text-lg text-on-surface">Email Support</h3>
+                <p className="text-on-surface-variant">suriyacoir@gmail.com</p>
               </div>
             </div>
           </div>
         </div>
+        
+        <div className="lg:col-span-7">
+          <div className="bg-surface-container-lowest p-8 md:p-12 rounded-2xl shadow-sm border border-outline-variant/10">
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="group">
+                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="name">Full Name</label>
+                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="name" name="name" placeholder="Johnathan Doe" type="text" />
+              </div>
+              <div className="group">
+                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="email">Business Email</label>
+                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="email" name="email" placeholder="j.doe@company.com" type="email" />
+              </div>
+              <div className="group">
+                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="message">Inquiry Details</label>
+                <textarea className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 resize-none" id="message" name="message" placeholder="Briefly describe your requirements..." rows="4"></textarea>
+              </div>
+              <button className="w-full bg-primary text-on-primary font-headline font-bold uppercase py-4 rounded-xl tracking-widest text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20" type="submit">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
-
-      {/* Map Section */}
-      <section className="relative h-[600px] w-full overflow-hidden">
-        <div className="absolute inset-0 bg-surface-dim grayscale contrast-125 brightness-75">
-          <img
-            alt="Map of Southern India"
-            className="w-full h-full object-cover opacity-30"
-            src={contactMapImg}
+      
+      <section className="mt-32">
+        <a 
+          href="https://maps.app.goo.gl/ZSq2biyeqiGzLgPcA?g_st=iw"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block rounded-3xl overflow-hidden shadow-2xl shadow-on-surface/5 h-[500px] relative group cursor-pointer"
+        >
+          <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
+          <img 
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+            data-alt="Suriyacoir Location Satellite Map" 
+            src="/satellite-map.png" 
+            alt="Business Map Location" 
           />
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="relative pointer-events-auto">
-            <div className="w-16 h-16 bg-primary flex items-center justify-center rounded-full border-4 border-background animate-pulse shadow-2xl">
-              <span
-                className="material-symbols-outlined text-on-primary"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                location_on
-              </span>
+          
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
+            <div className="absolute w-12 h-12 bg-primary rounded-full animate-ping opacity-60"></div>
+            <div className="relative w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+              <span className="absolute w-2 h-2 bg-white rounded-full"></span>
             </div>
-            <div className="absolute top-20 left-1/2 -translate-x-1/2 bg-surface p-6 rounded-lg shadow-xl w-64 text-center">
-              <h4 className="font-headline font-bold text-primary mb-1">Suriyacoir</h4>
-              <p className="text-xs text-secondary mb-3">Industrial Hub Alpha, TN</p>
-              <a className="text-xs font-bold text-primary underline underline-offset-4" href="#">
-                Get Directions
-              </a>
+            <div className="absolute -top-12 bg-surface-container-lowest text-on-surface font-bold text-sm px-4 py-2 rounded-lg shadow-xl whitespace-nowrap opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 pointer-events-none">
+              Click to open in Google Maps
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-surface-container-lowest rotate-45"></div>
             </div>
           </div>
-        </div>
 
-        {/* Global Logistics Info */}
-        <div className="absolute bottom-12 left-12 right-12 md:left-auto md:right-12 md:w-96 bg-[#ffffff]/90 backdrop-blur-xl p-8 rounded-lg shadow-2xl border border-outline-variant/10">
-          <div className="flex items-center gap-4 mb-6">
-            <span className="material-symbols-outlined text-primary text-3xl">public</span>
-            <h3 className="text-xl font-headline font-bold text-primary">Global Reach</h3>
+          <div className="absolute bottom-12 left-12 z-20 bg-surface-container-lowest/90 backdrop-blur-md p-6 rounded-2xl max-w-xs border border-white/20 transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-xl">
+            <div className="flex items-center gap-2 mb-2 text-primary">
+              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
+              <span className="text-xs font-bold uppercase tracking-widest">Main Office</span>
+            </div>
+            <p className="text-on-surface font-bold text-lg mb-1">Suriyacoir Hub</p>
+            <p className="text-on-surface-variant text-sm">Kallipatti, Tamil Nadu. Visit our manufacturing facility.</p>
           </div>
-          <div className="space-y-4">
-            {logistics.map((item, i) => (
-              <div key={i} className="flex justify-between items-center">
-                <span className="text-sm font-medium text-secondary">{item.region}</span>
-                <span className="text-xs font-bold text-primary bg-primary-fixed px-2 py-1 rounded">
-                  {item.status}
-                </span>
-              </div>
-            ))}
-          </div>
+        </a>
+      </section>
+      
+      <section className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="p-8 rounded-2xl bg-surface-container-low transition-colors hover:bg-surface-container">
+          <span className="material-symbols-outlined text-primary text-3xl mb-4">verified</span>
+          <h4 className="font-headline font-bold text-xl mb-2 text-on-surface">Certified Quality</h4>
+          <p className="text-on-surface-variant text-sm leading-relaxed">Every fiber batch is tested for structural integrity and biological purity.</p>
+        </div>
+        <div className="p-8 rounded-2xl bg-surface-container-low transition-colors hover:bg-surface-container">
+          <span className="material-symbols-outlined text-primary text-3xl mb-4">eco</span>
+          <h4 className="font-headline font-bold text-xl mb-2 text-on-surface">Zero Waste</h4>
+          <p className="text-on-surface-variant text-sm leading-relaxed">Our process repurposes 100% of the coconut husk into high-value ecology tech.</p>
+        </div>
+        <div className="p-8 rounded-2xl bg-surface-container-low transition-colors hover:bg-surface-container">
+          <span className="material-symbols-outlined text-primary text-3xl mb-4">rocket_launch</span>
+          <h4 className="font-headline font-bold text-xl mb-2 text-on-surface">Rapid Logistics</h4>
+          <p className="text-on-surface-variant text-sm leading-relaxed">Global supply network ensuring tier-1 delivery speeds across continents.</p>
         </div>
       </section>
     </main>
