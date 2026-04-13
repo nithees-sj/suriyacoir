@@ -1,16 +1,34 @@
-# React + Vite
+# 🌴 Suriya Coir: Engineered by Nature
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Suriya Coir** is a modern, responsive web application showcasing industrial-grade coir products designed for domestic elegance and commercial durability. The platform emphasizes a sustainable approach to carbon-neutral, high-performance coir alternatives.
 
-Currently, two official plugins are available:
+## ✨ Project Overview
+This project serves as the digital storefront and product catalog for Suriya Coir. It brings "The Living Loom" to the web, emphasizing sustainability, premium ("Pure Quality") products, and green solutions tailored for modern agriculture and industries all over the world.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key Features
+- **Dynamic Product Carousel**: An effortlessly smooth, infinitely scrolling showcase displaying our meticulously crafted collections.
+- **Interactive UI Elements**: Features dynamic 3D tilt-cards powered by calculated mouse coordinates and smooth transitions for a deeply engaging user experience.
+- **Dedicated Product Spotlights**: High-fidelity product displays, such as Premium Grow Bags engineered for high-yield greenhouse cultivation.
+- **Voices of the Loom**: A beautifully structured testimonial layout that spotlights feedback from our global clientele, reinforcing trust and quality.
 
-## React Compiler
+## 🥥 Our Collections
+The current web catalog features a robust lineup of our sustainable, natural coir-based solutions:
+- **120kg Fiber Baling**
+- **5kg Coco Chips & Coco Peat**
+- **650g Coco Peat Blocks**
+- **Curling Coir Rolls**
+- **Premium Grow Bags**
+- **Two-Ply Yarn Coir Ropes**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technology Stack
+Built with cutting-edge web technologies to ensure lightning-fast performance, maintainability, and a stunning aesthetic:
+- **Core Engine**: React 19 & React Router DOM for seamless, single-page application routing.
+- **Build Tooling**: Vite for uncompromised speed and optimized production builds.
+- **Styling & Theming**: Tailwind CSS v4, utilizing a highly customized design system of color tokens (primary, secondary, and dynamic surface containers).
+- **Animations**: Framer Motion alongside custom vanilla CSS animations to breathe life into the pages.
 
-## Expanding the ESLint configuration
+## 🌍 Sustainability First
+Suriya Coir stands for ecological balance. We believe in providing businesses globally with the power to easily transition to sustainable, eco-friendly resources—products not just manufactured, but truly *Engineered by Nature*.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+*"Ready to Weave a Better World?"*
