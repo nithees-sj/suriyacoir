@@ -7,9 +7,15 @@ import featuresData from '../data/features.json';
 import heroFibersImg from '../assets/home-hero-coir-fibers.jpg';
 import heroHuskImg from '../assets/home-hero-husk.jpg';
 import plantationImg from '../assets/home-plantation.jpg';
-import ropesImg from '../assets/home-ropes.jpg';
-import brushesImg from '../assets/home-brushes.jpg';
-import matsImg from '../assets/home-mats.jpg';
+
+import img120kg from '../assets/products/120kgfiberballing.png';
+import img5kgChips from '../assets/products/5kgchips.png';
+import img5kgCoco from '../assets/products/5kgcocopit.png';
+import img650g from '../assets/products/650gcocopitblocks.png';
+import imgCurling from '../assets/products/curlingcoirroll.png';
+import imgGrowbags from '../assets/products/growbags.png';
+import imgRopes from '../assets/products/twoplyyorncoirropes.png';
+
 import gandhiImg from '../assets/gandhi.jpg';
 import wangariImg from '../assets/wangari.jpg';
 import paulImg from '../assets/paul.jpeg';
@@ -21,11 +27,13 @@ const clientAvatars = {
 };
 
 const carouselItems = [
-  { name: 'Artisan Mats', img: matsImg },
-  { name: 'Bio-Geotextiles', img: plantationImg },
-  { name: 'Braided Ropes', img: ropesImg },
-  { name: 'Eco-Brushes', img: brushesImg },
-  { name: 'Raw Husk Fibers', img: heroFibersImg },
+  { name: '120kg Fiber Baling', img: img120kg },
+  { name: '5kg Chips', img: img5kgChips },
+  { name: '5kg Coco Peat', img: img5kgCoco },
+  { name: '650g Coco Peat Blocks', img: img650g },
+  { name: 'Curling Coir Roll', img: imgCurling },
+  { name: 'Grow Bags', img: imgGrowbags },
+  { name: 'Two-Ply Yarn Coir Ropes', img: imgRopes },
 ];
 
 export default function Home() {
@@ -239,17 +247,16 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {/* Product: Ropes (Large Card) */}
+          {/* Product: Grow Bags (Large Card) */}
           <div className="md:col-span-8 group bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container-high transition-colors">
             <div className="grid grid-cols-1 sm:grid-cols-2">
               <div className="p-12 flex flex-col justify-between">
                 <div>
                   <h3 className="text-3xl font-black font-headline text-primary mb-4">
-                    Industrial Braids
+                    Premium Grow Bags
                   </h3>
                   <p className="text-on-surface-variant mb-8">
-                    Heavy-duty coir rope for agriculture, landscaping, and
-                    marine applications.
+                    Engineered for high-yield berry, tomato, and greenhouse cultivation with an optimal air-to-water ratio.
                   </p>
                 </div>
                 <Link
@@ -262,11 +269,11 @@ export default function Home() {
                   </span>
                 </Link>
               </div>
-              <div className="h-80 sm:h-auto overflow-hidden">
+              <div className="h-64 sm:h-[360px] md:h-full max-h-[360px] overflow-hidden">
                 <img
-                  alt="Coir ropes"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  src={ropesImg}
+                  alt="Grow bags"
+                  className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
+                  src={imgGrowbags}
                 />
               </div>
             </div>

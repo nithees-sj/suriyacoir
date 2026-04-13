@@ -1,56 +1,58 @@
 [
   {
     "id": 1,
-    "name": "Elite-Grade Grow Bags",
-    "ref": "CM-041",
-    "description": "Engineered for high-yield berry and tomato cultivation with optimal air-to-water ratio.",
+    "name": "120kg Fiber Baling",
+    "ref": "SC-120FB",
+    "description": "High-quality 120kg fiber bales compressed for optimal storage and transport.",
     "label": "Industrial Spec",
-    "image": "prod-grow-bags",
-    "category": "Hydroponic Substrates"
+    "image": "120kgfiberballing.png"
   },
   {
     "id": 2,
-    "name": "Reinforced Geotextiles",
-    "ref": "CM-GT2",
-    "description": "High-tensile coconut fiber netting for infrastructure stabilization and slope conservation.",
-    "label": "Grade A+",
-    "image": "prod-geotextiles",
-    "category": "Industrial Geotextiles"
+    "name": "5kg Chips",
+    "ref": "SC-5KGC",
+    "description": "Premium 5kg coir chips, perfect for orchids and specialized potting mixes.",
+    "label": "Premium",
+    "image": "5kgchips.png"
   },
   {
     "id": 3,
-    "name": "Compressed Pellets",
-    "ref": "CM-PL09",
-    "description": "Quick-expanding bio-modular pellets designed for automated nursery seeding lines.",
-    "label": "Batch Tested",
-    "image": "prod-pellets",
-    "category": "Hydroponic Substrates"
+    "name": "5kg Coco Peat",
+    "ref": "SC-5KGCP",
+    "description": "Washed, low EC 5kg coco peat blocks for versatile growing applications.",
+    "label": "Low EC",
+    "image": "5kgcocopit.png"
   },
   {
     "id": 4,
-    "name": "Buffered Coco Pith",
-    "ref": "CM-BP",
-    "description": "Triple-washed, low EC buffered pith for sensitive orchid and propagation systems.",
-    "label": "Low EC Max",
-    "image": "prod-coco-pith",
-    "category": "Custom Media"
+    "name": "650g Coco Peat Blocks",
+    "ref": "SC-650CPB",
+    "description": "Compact 650g coco peat blocks, ideal for home gardening and retail.",
+    "label": "Retail Ready",
+    "image": "650gcocopitblocks.png"
   },
   {
     "id": 5,
-    "name": "Biodegradable Pots",
-    "ref": "CM-BP15",
-    "description": "Permeable fiber pots that eliminate transplant shock and promote root-air pruning.",
-    "label": "Zero Waste",
-    "image": "prod-bio-pots",
-    "category": "Erosion Control"
+    "name": "Curling Coir Roll",
+    "ref": "SC-CCR",
+    "description": "Machine-twisted curling coir rolls for mattress manufacturing and upholstery.",
+    "label": "Grade A+",
+    "image": "curlingcoirroll.png"
   },
   {
     "id": 6,
-    "name": "Custom Blend Program",
-    "ref": "CM-CUSTOM",
-    "description": "Tailored fiber-to-chip ratios with specific buffering profiles for specialized crops.",
-    "label": "Bespoke Service",
-    "image": "prod-custom-blend",
-    "category": "Custom Media"
+    "name": "Grow Bags",
+    "ref": "SC-GB",
+    "description": "Engineered grow bags for high-yield greenhouse and hydroponic systems.",
+    "label": "Hydroponic",
+    "image": "growbags.png"
+  },
+  {
+    "id": 7,
+    "name": "Two-Ply Yarn Coir Ropes",
+    "ref": "SC-TPYCR",
+    "description": "Strong, durable two-ply coir yarn ropes for agricultural and industrial use.",
+    "label": "Heavy Duty",
+    "image": "twoplyyorncoirropes.png"
   }
 ]

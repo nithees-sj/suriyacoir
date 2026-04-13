@@ -2,43 +2,33 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import productsData from '../data/products.json';
 
-import growBagsImg from '../assets/prod-grow-bags.jpg';
-import geotextilesImg from '../assets/prod-geotextiles.jpg';
-import pelletsImg from '../assets/prod-pellets.jpg';
-import cocoPithImg from '../assets/prod-coco-pith.jpg';
-import bioPotsImg from '../assets/prod-bio-pots.jpg';
-import customBlendImg from '../assets/prod-custom-blend.jpg';
-import textureImg from '../assets/coir-texture-macro.jpg';
+import img120kg from '../assets/products/120kgfiberballing.png';
+import img5kgChips from '../assets/products/5kgchips.png';
+import img5kgCoco from '../assets/products/5kgcocopit.png';
+import img650g from '../assets/products/650gcocopitblocks.png';
+import imgCurling from '../assets/products/curlingcoirroll.png';
+import imgGrowbags from '../assets/products/growbags.png';
+import imgRopes from '../assets/products/twoplyyorncoirropes.png';
 
 const productImages = {
-  'prod-grow-bags': growBagsImg,
-  'prod-geotextiles': geotextilesImg,
-  'prod-pellets': pelletsImg,
-  'prod-coco-pith': cocoPithImg,
-  'prod-bio-pots': bioPotsImg,
-  'prod-custom-blend': customBlendImg,
+  '120kgfiberballing.png': img120kg,
+  '5kgchips.png': img5kgChips,
+  '5kgcocopit.png': img5kgCoco,
+  '650gcocopitblocks.png': img650g,
+  'curlingcoirroll.png': imgCurling,
+  'growbags.png': imgGrowbags,
+  'twoplyyorncoirropes.png': imgRopes,
 };
 
-const categories = [
-  'All Systems',
-  'Hydroponic Substrates',
-  'Erosion Control',
-  'Industrial Geotextiles',
-  'Custom Media',
-];
-
 export default function Products() {
-  const [activeCategory, setActiveCategory] = useState('All Systems');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredProducts = productsData.filter((p) => {
-    const matchCategory =
-      activeCategory === 'All Systems' || p.category === activeCategory;
     const matchSearch =
       !searchQuery ||
       p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       p.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchCategory && matchSearch;
+    return matchSearch;
   });
 
   return (
@@ -53,9 +43,8 @@ export default function Products() {
             Precision <br />
             <span className="text-primary italic">Ecology.</span>
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-on-surface-variant max-w-md leading-relaxed font-body">
-            Harnessing the structural integrity of coconut fiber through
-            advanced modular manufacturing for global industrial applications.
+          <p className="mt-8 text-lg md:text-l text-on-surface-variant max-w-md leading-relaxed font-body">
+            Explore our premium range of coconut fiber products, custom-engineered for exceptional quality. Discover our latest offerings—from compressed coco peat blocks to heavy-duty coir ropes—and place your order today for sustainable, high-performance solutions.
           </p>
         </div>
         <div className="flex flex-col gap-4 items-start lg:items-end">
@@ -71,30 +60,15 @@ export default function Products() {
         </div>
       </header>
 
-      {/* Category Filtering */}
+      {/* Search Filtering */}
       <section className="max-w-7xl mx-auto px-8 mb-12">
-        <div className="flex flex-wrap gap-4 items-center justify-between border-b border-outline-variant/15 pb-8">
-          <div className="flex gap-6 overflow-x-auto hide-scrollbar py-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`whitespace-nowrap font-headline font-bold text-sm transition-colors pb-2 px-1 ${
-                  activeCategory === cat
-                    ? 'text-primary border-b-2 border-primary'
-                    : 'text-on-surface-variant hover:text-primary'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+        <div className="flex flex-wrap gap-4 items-center justify-end border-b border-outline-variant/15 pb-8">
           <div className="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full">
             <span className="material-symbols-outlined text-outline text-sm">
               search
             </span>
             <input
-              className="bg-transparent border-none focus:ring-0 focus:outline-none text-sm font-body w-40 md:w-64 placeholder:text-outline"
+              className="bg-transparent border-none focus:ring-0 focus:outline-none text-sm font-body w-full md:w-64 placeholder:text-outline"
               placeholder="Search catalog..."
               type="text"
               value={searchQuery}
