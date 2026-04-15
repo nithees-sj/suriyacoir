@@ -3,7 +3,7 @@ import aboutData from '../data/about.json';
 
 import rawHusksImg from '../assets/about-raw-husks.jpg';
 import coirFibersCloseupImg from '../assets/about-coir-fibers-closeup.jpg';
-import founderGardenImg from '../assets/about-founder-garden.jpg';
+import ownerimage from '../assets/ownerimage.jpeg';
 import plantationDawnImg from '../assets/about-plantation-dawn.png';
 import dryingFibersImg from '../assets/about-drying-fibers.jpg';
 import coirTextileImg from '../assets/about-coir-textile.jpg';
@@ -107,7 +107,7 @@ export default function About() {
                 <img
                   alt="Our Founder"
                   className="relative w-full aspect-square object-cover rounded-[3rem] shadow-xl"
-                  src={founderGardenImg}
+                  src={ownerimage}
                 />
               </div>
             </div>

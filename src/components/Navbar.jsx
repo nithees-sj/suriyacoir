@@ -22,7 +22,7 @@ export default function Navbar() {
           className="text-2xl font-bold text-emerald-950 tracking-tighter font-headline flex items-center gap-3"
         >
           <img src={logo} alt="Suriya Coir Logo" className="h-10 w-auto" />
-          <span>Suriya Coir</span>
+          <span>Suriya Coirs</span>
         </Link>
 
         {/* Desktop Links */}

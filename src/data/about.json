@@ -18,33 +18,33 @@
   "founder": {
     "label": "The Hands Behind the Fiber",
     "heading": "A Legacy Rooted in the Soil.",
-    "description": "Founder Elara Vance spent two decades in the coastal plantations of Kerala, witnessing the untapped potential of the coconut husk. What others saw as waste, Elara saw as a structural miracle.",
+    "description": "Founder Mr. A. Siva Prakash established Suriya Coirs in 2007 in Pollachi, Tamil Nadu, the heartland of fine coir production. Guided by a strong vision of excellence, he built the company to transform nature's most sustainable fiber into refined, high-quality products for the global marketplace.",
     "stats": [
-      { "value": "240k+", "label": "Husks Recycled" },
-      { "value": "15", "label": "Global Patents" }
+      { "value": "2007", "label": "Established" },
+      { "value": "Global", "label": "Export Reach" }
     ],
-    "quote": "Sustainability isn't a feature; it's the fundamental architecture of everything we build."
+    "quote": "We carry forward a legacy of delivering India's natural excellence to the world with distinction and integrity."
   },
   "milestones": {
     "heading": "Our Growth Rings",
-    "description": "Like the palms we harvest from, our journey is marked by steady, organic growth.",
+    "description": "Like the palms we harvest from, our journey is marked by steady, organic growth rooted in trust, transparency, and uncompromising quality.",
     "items": [
       {
         "number": "01",
-        "title": "The Seedling (2012)",
-        "description": "First extraction facility established in the coastal belts, focusing on raw fiber purity and local artisan partnership.",
+        "title": "The Inception (2007)",
+        "description": "Established by Mr. A. Siva Prakash in Kallipatti, Pollachi. Built on a vision of excellence and authenticity, we evolved from a dedicated manufacturing unit into a distinguished export enterprise serving discerning clients across international markets.",
         "color": "primary"
       },
       {
         "number": "02",
-        "title": "The Synthesis (2018)",
-        "description": "Developed our proprietary organic binding synthesis, allowing coir to be used in high-load architectural panels.",
+        "title": "Global Demand",
+        "description": "Specializing in the export of premium coir fibre, coco pith, husk chips, grow bags, and coir ropes. Each offering is meticulously crafted to meet international standards while retaining the natural integrity of coir for agricultural and horticultural applications.",
         "color": "secondary"
       },
       {
         "number": "03",
-        "title": "Global Canopy (2024)",
-        "description": "Opening our flagship sustainable lab in Zurich, bringing tropical engineering to the heart of European design.",
+        "title": "Sustainable Legacy",
+        "description": "Under visionary leadership, we uphold a deep commitment to sustainability and responsible sourcing. We deliver environmentally friendly solutions, carrying forward a legacy of delivering India's natural excellence to the world with distinction.",
         "color": "primary"
       }
     ]

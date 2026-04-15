@@ -41,8 +41,17 @@ export default function Contact() {
                 <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>mail</span>
               </div>
               <div>
-                <h3 className="font-headline font-bold text-lg text-on-surface">Email Support</h3>
+                <h3 className="font-headline font-bold text-lg text-on-surface">Official Mail</h3>
                 <p className="text-on-surface-variant">suriyacoir@gmail.com</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="bg-secondary-container p-3 rounded-xl text-on-secondary-container">
+                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>mail</span>
+              </div>
+              <div>
+                <h3 className="font-headline font-bold text-lg text-on-surface">Owner Mail</h3>
+                <p className="text-on-surface-variant">Suriyaks391@gmail.com</p>
               </div>
             </div>
           </div>
@@ -102,7 +111,7 @@ export default function Contact() {
               <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
               <span className="text-xs font-bold uppercase tracking-widest">Main Office</span>
             </div>
-            <p className="text-on-surface font-bold text-lg mb-1">Suriyacoir Hub</p>
+            <p className="text-on-surface font-bold text-lg mb-1">Suriyacoir's Outlet</p>
             <p className="text-on-surface-variant text-sm">Kallipatti, Tamil Nadu. Visit our manufacturing facility.</p>
           </div>
         </a>
