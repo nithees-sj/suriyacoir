@@ -164,35 +164,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Visual Mosaic: Tactile Primitives */}
-      <section className="py-32">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-12 grid-rows-2 gap-4 h-[600px]">
-            <div className="col-span-12 md:col-span-8 row-span-2 rounded-xl overflow-hidden shadow-lg group">
-              <img
-                alt="Coconut plantation at dawn"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src={plantationDawnImg}
-              />
-            </div>
-            <div className="hidden md:block col-span-4 row-span-1 rounded-tr-[5rem] rounded-bl-xl overflow-hidden shadow-lg group">
-              <img
-                alt="Drying coir fibers"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src={dryingFibersImg}
-              />
-            </div>
-            <div className="hidden md:block col-span-4 row-span-1 rounded-br-[5rem] rounded-tl-xl overflow-hidden shadow-lg group">
-              <img
-                alt="Finished coir textile"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src={coirTextileImg}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

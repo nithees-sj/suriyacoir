@@ -4,9 +4,9 @@ import heroData from '../data/hero.json';
 import testimonialsData from '../data/testimonials.json';
 import featuresData from '../data/features.json';
 
-import heroFibersImg from '../assets/home-hero-coir-fibers.jpg';
-import heroHuskImg from '../assets/home-hero-husk.jpg';
-import plantationImg from '../assets/home-plantation.jpg';
+import heroFibersImg from '../assets/home-hero-coir-fibers-new.png';
+import heroHuskImg from '../assets/home-hero-husk-new.png';
+import plantationImg from '../assets/cocount tree image.jpeg';
 
 import img120kg from '../assets/products/120kgfiberballing.png';
 import img5kgChips from '../assets/products/5kgchips.png';
@@ -107,10 +107,10 @@ export default function Home() {
             </div>
           </div>
           <div className="relative">
-            <div className="organic-shape-1 bg-surface-container-high w-full aspect-square relative overflow-hidden shadow-2xl">
+            <div className="organic-shape-1 w-full aspect-square relative overflow-hidden shadow-2xl">
               <img
                 alt="Coir fiber texture"
-                className="w-full h-full object-cover mix-blend-multiply opacity-80"
+                className="w-full h-full object-cover"
                 src={heroFibersImg}
               />
             </div>
@@ -219,7 +219,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden shadow-lg h-[400px] organic-shape-1">
+            <div className="rounded-3xl overflow-hidden shadow-lg h-[400px]">
               <img
                 alt="Sustainable coconut plantation"
                 className="w-full h-full object-cover"
@@ -242,7 +242,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="text-on-surface-variant max-w-md text-right md:text-left">
-            Industrial-grade coir products designed for domestic elegance and
+            Industrial-grade coir products designed for International elegance and
             commercial durability.
           </p>
         </div>
@@ -256,7 +256,7 @@ export default function Home() {
                     Premium Grow Bags
                   </h3>
                   <p className="text-on-surface-variant mb-8">
-                    Engineered for high-yield berry, tomato, and greenhouse cultivation with an optimal air-to-water ratio.
+                    Self-contained cultivation bags pre-filled with a compressed coco coir blend, providing an ideal, ready-to-use growing medium with superior aeration.
                   </p>
                 </div>
                 <Link

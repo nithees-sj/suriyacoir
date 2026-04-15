@@ -1,7 +1,40 @@
+import { useState } from 'react';
+
 export default function Contact() {
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState('idle'); // idle, loading, success, error
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
+    setStatus('loading');
+    
+    const formData = new FormData(e.target);
+    
+    // Web3Forms configuration - You need to replace this key
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("subject", `New Inquiry from ${formData.get('name')} - ${formData.get('designation')}`);
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        e.target.reset();
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        console.error("Error submitting form", data);
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error("Submission failed", error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   return (
@@ -62,18 +95,25 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="group">
                 <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="name">Full Name</label>
-                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="name" name="name" placeholder="Johnathan Doe" type="text" />
+                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="name" name="name" placeholder="Johnathan Doe" type="text" required />
               </div>
               <div className="group">
-                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="email">Business Email</label>
-                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="email" name="email" placeholder="j.doe@company.com" type="email" />
+                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="designation">Designation and company</label>
+                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="designation" name="designation" placeholder="Manager at ABC Company" type="text" required />
               </div>
               <div className="group">
                 <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="message">Inquiry Details</label>
-                <textarea className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 resize-none" id="message" name="message" placeholder="Briefly describe your requirements..." rows="4"></textarea>
+                <textarea className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 resize-none" id="message" name="message" placeholder="Briefly describe your requirements..." rows="4" required></textarea>
               </div>
-              <button className="w-full bg-primary text-on-primary font-headline font-bold uppercase py-4 rounded-xl tracking-widest text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20" type="submit">
-                Send Message
+              <button 
+                className="w-full bg-primary text-on-primary font-headline font-bold uppercase py-4 rounded-xl tracking-widest text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20 disabled:opacity-70 disabled:active:scale-100 disabled:cursor-not-allowed" 
+                type="submit"
+                disabled={status === 'loading'}
+              >
+                {status === 'loading' ? 'Sending...' : 
+                 status === 'success' ? 'Message Sent!' : 
+                 status === 'error' ? 'Failed. Try Again.' : 
+                 'Send Message'}
               </button>
             </form>
           </div>
