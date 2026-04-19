@@ -4,8 +4,7 @@ import heroData from '../data/hero.json';
 import testimonialsData from '../data/testimonials.json';
 import featuresData from '../data/features.json';
 
-import heroFibersImg from '../assets/home-hero-coir-fibers-new.png';
-import heroHuskImg from '../assets/home-hero-husk-new.png';
+import heroFactoryImg from '../assets/coir-factory-hero.png';
 import plantationImg from '../assets/cocount tree image.jpeg';
 
 import img120kg from '../assets/products/120kgfiberballing.png';
@@ -106,26 +105,13 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="relative">
-            <div className="organic-shape-1 w-full aspect-square relative overflow-hidden shadow-2xl">
+          <div className="relative flex justify-center lg:justify-end items-center h-full w-full mt-10 lg:mt-0">
+            <div className="w-full max-w-lg lg:max-w-none h-[400px] lg:h-[650px] rounded-[2rem] overflow-hidden shadow-2xl relative">
               <img
-                alt="Coir fiber texture"
+                alt="Coir Factory Environment"
                 className="w-full h-full object-cover"
-                src={heroFibersImg}
+                src={heroFactoryImg}
               />
-            </div>
-            {/* Husk Medallion */}
-            <div className="absolute -bottom-8 left-1/3 -translate-x-1/2 w-36 h-36 husk-medallion border-[6px] border-surface bg-white shadow-xl z-20 hidden md:block">
-              <img
-                alt="Coconut husk"
-                className="w-full h-full object-cover"
-                src={heroHuskImg}
-              />
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white bg-primary/40 backdrop-blur-sm px-2 py-1 rounded">
-                  Pure Quality
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -138,7 +124,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 mb-16 flex justify-between items-end">
           <div>
             <span className="text-secondary font-label uppercase tracking-widest text-sm font-bold mb-4 block">
-              The Carousel
+              The Products
             </span>
             <h2 className="text-5xl font-black font-headline tracking-tighter text-primary">
               Crafted Collections.

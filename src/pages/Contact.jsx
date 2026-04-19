@@ -10,7 +10,7 @@ export default function Contact() {
     const formData = new FormData(e.target);
     
     // Web3Forms configuration - You need to replace this key
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "3fbce981-98a4-41d3-a638-1c69b5e2108f");
     formData.append("subject", `New Inquiry from ${formData.get('name')} - ${formData.get('designation')}`);
     
     try {
