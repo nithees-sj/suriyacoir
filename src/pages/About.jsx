@@ -13,90 +13,6 @@ export default function About() {
 
   return (
     <main>
-      {/* Hero: The Living Loom Concept */}
-      <section className="relative pt-24 pb-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-7">
-              <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-secondary-container text-on-secondary-container rounded-full">
-                {hero.tagline}
-              </span>
-              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-none mb-8">
-                {hero.heading}<br />
-                Refined by <span className="text-secondary italic">{hero.headingHighlight}</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
-                {hero.description}
-              </p>
-            </div>
-            <div className="lg:col-span-5 relative">
-              <div className="aspect-[4/5] rounded-tl-[10rem] rounded-tr-xl rounded-br-[8rem] rounded-bl-xl overflow-hidden shadow-2xl">
-                <img
-                  alt="Raw coconut husks"
-                  className="w-full h-full object-cover"
-                  src={rawHusksImg}
-                />
-              </div>
-              {/* Husk Medallion */}
-              <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full bg-surface-container-lowest p-2 shadow-xl hidden md:block">
-                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-outline-variant/20">
-                  <img
-                    alt="Coir fiber quality"
-                    className="w-full h-full object-cover"
-                    src={coirFibersCloseupImg}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-full h-full husk-medallion-rotation" viewBox="0 0 100 100">
-                      <defs>
-                        <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" id="circlePath" />
-                      </defs>
-                      <text fill="#000000ff" fontFamily="Manrope" fontSize="8" fontWeight="700">
-                        <textPath xlinkHref="#circlePath" spacing="auto">
-                          PURE COIR ORGANIC SYNTHESIS • PREMIUM GRADE • 
-                        </textPath>
-                      </text>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Milestones: Curved Timeline Layout */}
-      <section className="py-32 bg-surface-container-highest/30 rounded-b-[5rem]">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="text-center max-w-2xl mx-auto mb-20">
-            <h2 className="text-4xl font-bold text-primary mb-4">{milestones.heading}</h2>
-            <p className="text-on-surface-variant">{milestones.description}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {milestones.items.map((item, i) => (
-              <div
-                key={i}
-                className={`relative p-10 bg-surface-container-lowest rounded-[3rem] border border-outline-variant/10 shadow-sm hover:-translate-y-2 transition-transform ${
-                  i === 1 ? 'md:mt-12' : ''
-                }`}
-              >
-                <div
-                  className={`absolute top-0 right-10 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl ${
-                    item.color === 'primary'
-                      ? 'bg-primary text-on-primary'
-                      : 'bg-secondary text-on-secondary'
-                  }`}
-                >
-                  {item.number}
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
       {/* The Founder & Heritage: Asymmetric Editorial */}
       <section className="py-32 bg-surface">
         <div className="max-w-7xl mx-auto px-8">
@@ -138,6 +54,40 @@ export default function About() {
           </div>
         </div>
       </section>
+      {/* Milestones: Curved Timeline Layout */}
+      <section className="py-32 bg-surface-container-highest/30 rounded-b-[5rem]">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <h2 className="text-4xl font-bold text-primary mb-4">{milestones.heading}</h2>
+            <p className="text-on-surface-variant">{milestones.description}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {milestones.items.map((item, i) => (
+              <div
+                key={i}
+                className={`relative p-10 bg-surface-container-lowest rounded-[3rem] border border-outline-variant/10 shadow-sm hover:-translate-y-2 transition-transform ${
+                  i === 1 ? 'md:mt-12' : ''
+                }`}
+              >
+                <div
+                  className={`absolute top-0 right-10 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl ${
+                    item.color === 'primary'
+                      ? 'bg-primary text-on-primary'
+                      : 'bg-secondary text-on-secondary'
+                  }`}
+                >
+                  {item.number}
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
 
       {/* Mission & Vision: Tonal Shift */}
       <section className="py-32 bg-surface-container-low rounded-t-[5rem]">

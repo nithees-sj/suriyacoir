@@ -24,16 +24,16 @@ export default function Contact() {
       if (data.success) {
         setStatus('success');
         e.target.reset();
-        setTimeout(() => setStatus('idle'), 5000);
+        setTimeout(() => setStatus('idle'), 1500);
       } else {
         console.error("Error submitting form", data);
         setStatus('error');
-        setTimeout(() => setStatus('idle'), 5000);
+        setTimeout(() => setStatus('idle'), 1500);
       }
     } catch (error) {
       console.error("Submission failed", error);
       setStatus('error');
-      setTimeout(() => setStatus('idle'), 5000);
+      setTimeout(() => setStatus('idle'), 1500);
     }
   };
 
@@ -75,7 +75,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-headline font-bold text-lg text-on-surface">Official Mail</h3>
-                <p className="text-on-surface-variant">suriyacoir@gmail.com</p>
+                <p className="text-on-surface-variant">suriyacoirs@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
