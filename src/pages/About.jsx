@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom';
 import aboutData from '../data/about.json';
 
-import rawHusksImg from '../assets/about-raw-husks.jpg';
-import coirFibersCloseupImg from '../assets/about-coir-fibers-closeup.jpg';
 import ownerimage from '../assets/ownerimage.jpeg';
-import plantationDawnImg from '../assets/about-plantation-dawn.png';
-import dryingFibersImg from '../assets/about-drying-fibers.jpg';
-import coirTextileImg from '../assets/about-coir-textile.jpg';
 
 export default function About() {
   const { hero, mission, vision, founder, milestones } = aboutData;
