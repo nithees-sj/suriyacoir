@@ -165,57 +165,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Intro Section: The Living Loom */}
-      <section className="py-32 bg-surface-container-low rounded-t-[4rem]">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-            <div className="col-span-2">
-              <h2 className="text-4xl md:text-5xl font-black font-headline tracking-tighter text-primary mb-6">
-                {heroData.introHeading} <br />
-                {heroData.introHeadingLine2}
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
-                {heroData.introFeatures.map((feature, i) => (
-                  <div key={i} className="space-y-4">
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                        i === 0
-                          ? 'bg-primary-container'
-                          : 'bg-secondary-container'
-                      }`}
-                    >
-                      <span
-                        className={`material-symbols-outlined ${
-                          i === 0
-                            ? 'text-on-primary-container'
-                            : 'text-on-secondary-container'
-                        }`}
-                        style={{ fontVariationSettings: "'FILL' 1" }}
-                      >
-                        {feature.icon}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-primary">
-                      {feature.title}
-                    </h3>
-                    <p className="text-on-surface-variant">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg h-[400px]">
-              <img
-                alt="Sustainable coconut plantation"
-                className="w-full h-full object-cover"
-                src={plantationImg}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Product Bento Grid */}
       <section className="py-32 max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
