@@ -5,7 +5,7 @@ import testimonialsData from '../data/testimonials.json';
 import featuresData from '../data/features.json';
 
 import plantationImg from '../assets/cocount tree image.jpeg';
-import doodleBg from '../assets/coir_doodle_bg_wide_labels.png';
+import doodleBg from '../assets/coir_doodle_bg_wide_labels_4k_gen.png';
 
 import img120kg from '../assets/products/120kgfiberballing.png';
 import img5kgChips from '../assets/products/5kgchips.png';
@@ -76,10 +76,10 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden pt-10">
+      <section className="relative min-h-[700px] lg:min-h-0 lg:h-[calc(100vh-88px)] flex items-center justify-center overflow-hidden pt-10">
         {/* Doodle Background Pattern */}
         <div 
-          className="absolute inset-0 -z-20 opacity-70 pointer-events-none mix-blend-multiply"
+          className="absolute inset-0 -z-20 opacity-90 pointer-events-none mix-blend-multiply"
           style={{ backgroundImage: `url(${doodleBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
         ></div>
         <div className="max-w-4xl mx-auto px-8 w-full text-center">
@@ -110,6 +110,15 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* Floating Scroll Arrow for Laptops */}
+        <div 
+          className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center animate-bounce text-primary cursor-pointer z-20 hover:text-secondary transition-colors"
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+        >
+          <span className="text-xs font-label font-bold tracking-widest uppercase mb-1 bg-surface-container-lowest/80 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Swipe to know more</span>
+          <span className="material-symbols-outlined text-4xl drop-shadow-md">keyboard_arrow_down</span>
         </div>
       </section>
 
@@ -214,7 +223,7 @@ export default function Home() {
               <h3 className="text-3xl font-black font-headline mb-4">
                 {featuresData.heading}
               </h3>
-              <p className="opacity-80 leading-relaxed mb-6 text-sm">
+              <p className="opacity-100 leading-relaxed mb-6 text-sm">
                 {featuresData.description}
               </p>
               <ul className="space-y-4">
