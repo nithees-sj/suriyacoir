@@ -101,6 +101,21 @@
   animation: infinite-scroll 40s linear infinite;
 }
 
+/* Vertical Scrolling Flow */
+@keyframes vertical-scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+.animate-vertical-scroll {
+  animation: vertical-scroll 30s linear infinite;
+}
+
+.mask-image-vertical {
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
 /* 3D Perspective Tilt */
 .perspective-container {
   perspective: 1000px;

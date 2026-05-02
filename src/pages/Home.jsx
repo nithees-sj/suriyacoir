@@ -7,6 +7,18 @@ import featuresData from '../data/features.json';
 import plantationImg from '../assets/cocount tree image.jpeg';
 import doodleBg from '../assets/coir_doodle_bg_sand.png';
 
+import phase1 from '../assets/phase1_harvest.png';
+import phase2 from '../assets/phase2_extraction.png';
+import phase3 from '../assets/phase3_drying.png';
+import phase4 from '../assets/phase4_moulding.png';
+
+const phaseImages = [
+  { img: phase1, title: 'Harvesting' },
+  { img: phase2, title: 'Extraction' },
+  { img: phase3, title: 'Drying' },
+  { img: phase4, title: 'Moulding' }
+];
+
 import img120kg from '../assets/products/120kgfiberballing.png';
 import img5kgChips from '../assets/products/5kgchips.png';
 import img5kgCoco from '../assets/products/5kgcocopit.png';
@@ -76,43 +88,47 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden pt-10">
-        {/* Doodle Background Pattern */}
-        <div
-          className="absolute inset-0 -z-20 opacity-70 pointer-events-none mix-blend-multiply"
-          style={{ backgroundImage: `url(${doodleBg})`, backgroundSize: '350px', backgroundRepeat: 'repeat' }}
-        ></div>
-        <div className="max-w-4xl mx-auto px-8 w-full text-center">
-          <div className="z-10">
-            <span className="inline-block py-1 px-4 mb-6 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-label uppercase tracking-widest">
+      <section className="relative min-h-[870px] flex items-center overflow-hidden pt-10 bg-white">
+        <div className="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="z-10 text-left flex flex-col items-start justify-center">
+            <span className="inline-block py-1.5 px-5 mb-6 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-label uppercase tracking-widest font-bold">
               {heroData.tagline}
             </span>
-            <h1 className="text-6xl md:text-8xl font-black font-headline tracking-tighter text-primary leading-[1.1] mb-8">
+            <h1 className="text-5xl lg:text-7xl font-black font-headline tracking-tight text-primary leading-[1.15] mb-6">
               {heroData.heading}{' '}
               <span className="text-secondary">{heroData.headingHighlight}</span>{' '}
               {heroData.headingEnd}
             </h1>
-            <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
               {heroData.description}
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4">
               <Link
                 to="/products"
-                className="bg-primary bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-bold shadow-[0_20px_40px_rgba(21,66,18,0.06)] hover:scale-105 transition-transform"
+                className="bg-primary bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 rounded-full font-bold shadow-[0_20px_40px_rgba(21,66,18,0.06)] hover:scale-105 transition-transform"
               >
                 {heroData.ctaPrimary}
               </Link>
               <Link
                 to="/about"
-                className="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform"
+                className="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-bold hover:scale-105 transition-transform"
               >
                 {heroData.ctaSecondary}
               </Link>
             </div>
           </div>
+          <div className="relative flex justify-center lg:justify-end items-center h-[500px] lg:h-[700px] w-full mt-10 lg:mt-0 overflow-hidden mask-image-vertical">
+            <div className="flex flex-col gap-8 animate-vertical-scroll hover:[animation-play-state:paused] py-10">
+              {phaseImages.concat(phaseImages).map((phase, i) => (
+                <div key={i} className="w-full max-w-[420px] rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white bg-white flex-shrink-0 transform transition-transform hover:scale-105 hover:-rotate-1">
+                  <img src={phase.img} alt={phase.title} className="w-full h-auto object-cover rounded-2xl" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         {/* Background Decoration */}
-        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-secondary/10 organic-shape-2 -z-10 blur-3xl"></div>
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-secondary/10 organic-shape-2 -z-10 blur-3xl"></div>
       </section>
 
       {/* Product Carousel Section */}
