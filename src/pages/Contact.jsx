@@ -75,7 +75,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-headline font-bold text-lg text-on-surface">Official Mail</h3>
-                <p className="text-on-surface-variant">suriyacoirs@gmail.com</p>
+                <p className="text-on-surface-variant">suriyacoir@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

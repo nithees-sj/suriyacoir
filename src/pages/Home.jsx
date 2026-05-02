@@ -4,8 +4,8 @@ import heroData from '../data/hero.json';
 import testimonialsData from '../data/testimonials.json';
 import featuresData from '../data/features.json';
 
-import heroFactoryImg from '../assets/coir-factory-hero.png';
 import plantationImg from '../assets/cocount tree image.jpeg';
+import doodleBg from '../assets/coir_doodle_bg_sand.png';
 
 import img120kg from '../assets/products/120kgfiberballing.png';
 import img5kgChips from '../assets/products/5kgchips.png';
@@ -76,42 +76,38 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[870px] flex items-center overflow-hidden pt-10">
-        <div className="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="z-10 text-left">
+      <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden pt-10">
+        {/* Doodle Background Pattern */}
+        <div
+          className="absolute inset-0 -z-20 opacity-70 pointer-events-none mix-blend-multiply"
+          style={{ backgroundImage: `url(${doodleBg})`, backgroundSize: '350px', backgroundRepeat: 'repeat' }}
+        ></div>
+        <div className="max-w-4xl mx-auto px-8 w-full text-center">
+          <div className="z-10">
             <span className="inline-block py-1 px-4 mb-6 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-label uppercase tracking-widest">
               {heroData.tagline}
             </span>
-            <h1 className="text-6xl md:text-8xl font-black font-headline tracking-tighter text-primary leading-[0.9] mb-8">
+            <h1 className="text-6xl md:text-8xl font-black font-headline tracking-tighter text-primary leading-[1.1] mb-8">
               {heroData.heading}{' '}
               <span className="text-secondary">{heroData.headingHighlight}</span>{' '}
               {heroData.headingEnd}
             </h1>
-            <p className="text-lg md:text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">
               {heroData.description}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 to="/products"
-                className="bg-primary bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 rounded-full font-bold shadow-[0_20px_40px_rgba(21,66,18,0.06)] hover:scale-105 transition-transform"
+                className="bg-primary bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-bold shadow-[0_20px_40px_rgba(21,66,18,0.06)] hover:scale-105 transition-transform"
               >
                 {heroData.ctaPrimary}
               </Link>
               <Link
                 to="/about"
-                className="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-bold hover:scale-105 transition-transform"
+                className="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform"
               >
                 {heroData.ctaSecondary}
               </Link>
-            </div>
-          </div>
-          <div className="relative flex justify-center lg:justify-end items-center h-full w-full mt-10 lg:mt-0">
-            <div className="w-full max-w-lg lg:max-w-none h-[400px] lg:h-[650px] rounded-[2rem] overflow-hidden shadow-2xl relative">
-              <img
-                alt="Coir Factory Environment"
-                className="w-full h-full object-cover"
-                src={heroFactoryImg}
-              />
             </div>
           </div>
         </div>
