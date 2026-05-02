@@ -5,7 +5,7 @@ import testimonialsData from '../data/testimonials.json';
 import featuresData from '../data/features.json';
 
 import plantationImg from '../assets/cocount tree image.jpeg';
-import doodleBg from '../assets/coir_doodle_bg_wide_labels_4k_gen.png';
+import landingBg from '../assets/landing-bg.png';
 
 import img120kg from '../assets/products/120kgfiberballing.png';
 import img5kgChips from '../assets/products/5kgchips.png';
@@ -80,7 +80,7 @@ export default function Home() {
         {/* Doodle Background Pattern */}
         <div 
           className="absolute inset-0 -z-20 opacity-90 pointer-events-none mix-blend-multiply"
-          style={{ backgroundImage: `url(${doodleBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+          style={{ backgroundImage: `url(${landingBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
         ></div>
         <div className="max-w-4xl mx-auto px-8 w-full text-center">
           <div className="z-10 bg-[#faf9f7]/90 backdrop-blur-md p-10 md:p-14 rounded-[3rem] shadow-[0_20px_40px_rgba(0,0,0,0.05)] border border-surface-container-low inline-block">
