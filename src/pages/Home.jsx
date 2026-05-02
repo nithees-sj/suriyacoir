@@ -117,7 +117,7 @@ export default function Home() {
           className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center animate-bounce text-primary cursor-pointer z-20 hover:text-secondary transition-colors"
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
-          <span className="text-xs font-label font-bold tracking-widest uppercase mb-1 bg-surface-container-lowest/80 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Swipe to know more</span>
+          <span className="text-xs font-label font-bold tracking-widest uppercase mb-1 bg-surface-container-lowest/80 px-3 py-1 rounded-full backdrop-blur-sm shadow-sm">Scroll to know more</span>
           <span className="material-symbols-outlined text-4xl drop-shadow-md">keyboard_arrow_down</span>
         </div>
       </section>
