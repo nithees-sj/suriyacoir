@@ -9,9 +9,10 @@ export default function Contact() {
     
     const formData = new FormData(e.target);
     
-    // Web3Forms configuration - You need to replace this key
-    formData.append("access_key", "3fbce981-98a4-41d3-a638-1c69b5e2108f");
-    formData.append("subject", `New Inquiry from ${formData.get('name')} - ${formData.get('designation')}`);
+    // Web3Forms configuration
+    formData.append("access_key", "96f769f2-cbb9-470b-b5e3-198175986fc2");
+    formData.append("subject", `New Inquiry from ${formData.get('name')}`);
+    formData.append("from_name", formData.get('name'));
     
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -65,7 +66,7 @@ export default function Contact() {
                 <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
               </div>
               <div>
-                <h3 className="font-headline font-bold text-lg text-on-surface">Direct Line</h3>
+                <h3 className="font-headline font-bold text-lg text-on-surface">Whatsapp</h3>
                 <p className="text-on-surface-variant">+91 93844 49025</p>
               </div>
             </div>
@@ -75,7 +76,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-headline font-bold text-lg text-on-surface">Official Mail</h3>
-                <p className="text-on-surface-variant">suriyacoir@gmail.com</p>
+                <p className="text-on-surface-variant">suriyaacoirs@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -94,12 +95,12 @@ export default function Contact() {
           <div className="bg-surface-container-lowest p-8 md:p-12 rounded-2xl shadow-sm border border-outline-variant/10">
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="group">
-                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="name">Full Name</label>
-                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="name" name="name" placeholder="Johnathan Doe" type="text" required />
+                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="email">Company Mail</label>
+                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="email" name="email" placeholder="contact@company.com" type="email" required />
               </div>
               <div className="group">
-                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="designation">Designation and company</label>
-                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="designation" name="designation" placeholder="Manager at ABC Company" type="text" required />
+                <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="name">Designation and Name</label>
+                <input className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/15 focus:ring-0 focus:border-primary focus:bg-surface-container-lowest transition-all px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40" id="name" name="name" placeholder="John Doe, Manager at ABC Company" type="text" required />
               </div>
               <div className="group">
                 <label className="block text-sm font-label font-bold text-primary mb-2 uppercase tracking-widest" htmlFor="message">Inquiry Details</label>
