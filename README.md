@@ -32,3 +32,21 @@ Suriya Coir stands for ecological balance. We believe in providing businesses gl
 
 ---
 *"Ready to Weave a Better World?"*
+
+## GitHub Pages Deployment
+- The repository is configured to deploy automatically to GitHub Pages from the `main` branch using GitHub Actions.
+- The custom domain is stored in `public/CNAME`, so every production build preserves `suriyacoirs.com`.
+- For single-page app routing on GitHub Pages, the deploy workflow copies `index.html` to `404.html` so route refreshes keep working.
+
+### Required DNS Records For `suriyacoirs.com`
+- `A` record: `185.199.108.153`
+- `A` record: `185.199.109.153`
+- `A` record: `185.199.110.153`
+- `A` record: `185.199.111.153`
+- `CNAME` record for `www`: `nithees-sj.github.io`
+
+### Deploy Flow
+1. Push to `main`.
+2. Wait for the `Deploy to GitHub Pages` GitHub Actions workflow to finish.
+3. In GitHub repository settings, keep the Pages source as `GitHub Actions`.
+4. After DNS propagation completes, enable HTTPS in the Pages settings.
