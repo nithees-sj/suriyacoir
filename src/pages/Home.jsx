@@ -76,35 +76,35 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[700px] lg:min-h-0 lg:h-[calc(100vh-88px)] flex items-center justify-center overflow-hidden pt-10">
+      <section className="relative min-h-[700px] lg:min-h-0 lg:h-[calc(100vh-88px)] flex items-center justify-center overflow-hidden bg-background px-4 pt-8 pb-10 sm:px-6 md:px-8 md:pt-10">
         {/* Doodle Background Pattern */}
         <div 
-          className="absolute inset-0 -z-20 opacity-90 pointer-events-none mix-blend-multiply"
+          className="absolute inset-0 z-0 hidden opacity-90 pointer-events-none mix-blend-multiply md:block"
           style={{ backgroundImage: `url(${landingBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
         ></div>
-        <div className="max-w-4xl mx-auto px-8 w-full text-center">
-          <div className="z-10 bg-[#faf9f7]/90 backdrop-blur-md p-10 md:p-14 rounded-[3rem] shadow-[0_20px_40px_rgba(0,0,0,0.05)] border border-surface-container-low inline-block">
+        <div className="relative z-10 max-w-4xl mx-auto w-full text-center">
+          <div className="inline-block w-full bg-[#faf9f7] md:bg-[#faf9f7]/90 md:backdrop-blur-md p-6 sm:p-8 md:p-14 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] shadow-[0_20px_40px_rgba(0,0,0,0.05)] border border-surface-container-low">
             <span className="inline-block py-1.5 px-5 mb-6 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-label uppercase tracking-widest font-bold">
               {heroData.tagline}
             </span>
-            <h1 className="text-5xl lg:text-7xl font-black font-headline tracking-tight text-primary leading-[1.15] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black font-headline tracking-tight text-primary leading-[1.05] sm:leading-[1.1] lg:leading-[1.15] mb-6">
               {heroData.heading}{' '}
               <span className="text-secondary">{heroData.headingHighlight}</span>{' '}
               {heroData.headingEnd}
             </h1>
-            <p className="text-lg text-on-surface-variant max-w-xl mx-auto mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg text-on-surface-variant max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed">
               {heroData.description}
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
               <Link
                 to="/products"
-                className="bg-primary bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 rounded-full font-bold shadow-[0_20px_40px_rgba(21,66,18,0.06)] hover:scale-105 transition-transform"
+                className="w-full sm:w-auto bg-primary bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold shadow-[0_20px_40px_rgba(21,66,18,0.06)] hover:scale-105 transition-transform"
               >
                 {heroData.ctaPrimary}
               </Link>
               <Link
                 to="/about"
-                className="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-bold hover:scale-105 transition-transform"
+                className="w-full sm:w-auto bg-secondary-container text-on-secondary-container px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold hover:scale-105 transition-transform"
               >
                 {heroData.ctaSecondary}
               </Link>
